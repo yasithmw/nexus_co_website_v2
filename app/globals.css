@@ -1,26 +1,157 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-ink: #27187e;
+  --color-ink-2: #1a1057;
+  --color-blue: #758bfd;
+  --color-blue-2: #aeb8fe;
+  --color-paper: #f1f2f6;
+  --color-paper-2: #e8e9f0;
+  --color-paper-3: #fafafd;
+  --color-cream: #c73e69;
+  --color-peach: #fbe4d2;
+  --color-white: #ffffff;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-line: rgba(39, 24, 126, 0.14);
+  --color-line-2: rgba(39, 24, 126, 0.08);
+  --color-muted: rgba(39, 24, 126, 0.55);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-display: var(--font-geist), "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-geist), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), "Times New Roman", serif;
+
+  --radius-md: 24px;
+  --radius-lg: 36px;
+
+  --animate-spin-slow: spin-slow 12s linear infinite;
+  --animate-ticker: ticker 40s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-rise: rise 0.9s cubic-bezier(0.2, 0.6, 0.2, 1) both;
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-12px) rotate(3deg);
+    }
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    color: inherit;
+  }
+
+  /* Dot-grid texture overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+    background-image:
+      radial-gradient(rgba(39, 24, 126, 0.04) 1px, transparent 1px),
+      radial-gradient(rgba(39, 24, 126, 0.03) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+  }
+}
+
+@layer utilities {
+  .shell {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 56px);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Reveal-on-scroll initial state; .in is added by the Reveal client wrapper */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.9s ease,
+      transform 0.9s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Stroke style for inline line icons */
+  .icon-line {
+    stroke: currentColor;
+    stroke-width: 1.6;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
