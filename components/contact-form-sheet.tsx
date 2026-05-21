@@ -11,7 +11,13 @@ import {
 
 type SheetState = "closed" | "partial" | "expanded";
 
-export function ContactFormSheet() {
+export function ContactFormSheet({
+  triggerVariant = "paper",
+  triggerLabel,
+}: {
+  triggerVariant?: "paper" | "ink";
+  triggerLabel?: string;
+} = {}) {
   const [sheet, setSheet] = useState<SheetState>("closed");
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
@@ -32,13 +38,13 @@ export function ContactFormSheet() {
     if (!el || sheet === "closed") return;
 
     const onWheel = (e: WheelEvent) => {
-      if (sheet === "partial" && e.deltaY < 0) {
+      if (sheet === "partial" && e.deltaY > 0) {
         e.preventDefault();
         setSheet("expanded");
       } else if (
         sheet === "expanded" &&
         (scrollRef.current?.scrollTop ?? 1) === 0 &&
-        e.deltaY > 0
+        e.deltaY < 0
       ) {
         setSheet("partial");
       }
@@ -72,12 +78,12 @@ export function ContactFormSheet() {
 
   const onTouchEnd = (e: ReactTouchEvent) => {
     const delta = touchStartY.current - e.changedTouches[0].clientY;
-    if (sheet === "partial" && delta > 30) {
+    if (sheet === "partial" && delta < -30) {
       setSheet("expanded");
     } else if (
       sheet === "expanded" &&
       (scrollRef.current?.scrollTop ?? 1) === 0 &&
-      delta < -30
+      delta > 30
     ) {
       setSheet("partial");
     }
@@ -110,13 +116,17 @@ export function ContactFormSheet() {
 
   return (
     <>
-      {/* Trigger — matches existing email pill CTA style */}
+      {/* Trigger */}
       <button
         onClick={() => setSheet("partial")}
-        className="mb-[100px] inline-flex items-center gap-4 rounded-full bg-paper px-[30px] py-[22px] text-[17px] font-medium tracking-[-0.01em] text-ink transition-[padding,transform] duration-200 hover:-translate-y-0.5 hover:pr-10"
+        className={
+          triggerVariant === "ink"
+            ? "self-start inline-flex items-center gap-3 rounded-full bg-ink px-8 py-[18px] text-[16px] font-medium tracking-[-0.01em] text-paper transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-ink-2"
+            : "mb-[100px] inline-flex items-center gap-4 rounded-full bg-paper px-[30px] py-[22px] text-[17px] font-medium tracking-[-0.01em] text-ink transition-[padding,transform] duration-200 hover:-translate-y-0.5 hover:pr-10"
+        }
       >
-        <span className="h-2 w-2 rounded-full bg-ink" />
-        hello@nexusco.com.au
+        {triggerVariant === "paper" && <span className="h-2 w-2 rounded-full bg-ink" />}
+        {triggerLabel ?? "hello@nexusco.com.au"}
         <span>→</span>
       </button>
 
