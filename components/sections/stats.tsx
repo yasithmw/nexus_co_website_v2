@@ -33,7 +33,7 @@ const stats: Stat[] = [
 export function Stats() {
   return (
     <section className="py-[120px]">
-      <SectionHead num="04" label="Receipts" right="The numbers" />
+      <SectionHead label="Receipts" right="The numbers" />
 
       <div className="grid grid-cols-2 border-t border-line md:grid-cols-4">
         {stats.map((s, i) => (

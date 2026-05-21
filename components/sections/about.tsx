@@ -25,7 +25,7 @@ export function About() {
       />
 
       <div className="relative mx-auto max-w-[1440px]">
-        <SectionHead num="03" label="The Team" right="Who We Are" />
+        <SectionHead label="The Team" right="Who We Are" />
 
         {/* Row 1 — Editorial split */}
         <div className="grid items-center gap-14 md:grid-cols-[1.4fr_1fr]">
@@ -56,7 +56,7 @@ export function About() {
                 you.
               </p>
               <a
-                href="#"
+                href="/about"
                 className="mt-7 inline-flex items-center gap-3 border-b border-ink/20 pb-1.5 font-display text-[15px] font-medium text-ink transition-[border-color,padding] duration-150 ease-out hover:border-ink hover:pr-3"
               >
                 About Us <span>→</span>

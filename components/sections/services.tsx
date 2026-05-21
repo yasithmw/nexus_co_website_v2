@@ -68,7 +68,7 @@ const services: Service[] = [
 export function Services() {
   return (
     <section id="services" className="pb-20 pt-24">
-      <SectionHead num="01" label="What we do" right="Four disciplines" />
+      <SectionHead label="What we do" right="Four disciplines" />
 
       <Reveal
         as="h2"

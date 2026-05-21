@@ -19,7 +19,7 @@ const tileArrowBase =
 export function Work() {
   return (
     <section id="work" className="relative pb-20 pt-24">
-      <SectionHead num="02" label="Selected work" right="2024 — 2026" />
+      <SectionHead label="Selected work" right="2024 — 2026" />
 
       <Reveal
         as="h2"

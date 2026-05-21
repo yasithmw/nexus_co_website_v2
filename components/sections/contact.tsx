@@ -60,7 +60,7 @@ export function Contact() {
 
       <div className="relative mx-auto max-w-[1440px]">
         <div className="mb-8 font-mono text-[11px] uppercase tracking-[0.16em] text-blue-2">
-          — 06 / Get in touch
+          Get in touch
         </div>
 
         <Reveal
