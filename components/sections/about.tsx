@@ -25,20 +25,13 @@ export function About() {
       />
 
       <div className="relative mx-auto max-w-[1440px]">
-        <SectionHead num="03" label="The Studio" right="Who We Are" />
+        <SectionHead num="03" label="The Team" right="Who We Are" />
 
         {/* Row 1 — Editorial split */}
         <div className="grid items-center gap-14 md:grid-cols-[1.4fr_1fr]">
 
           {/* Left: headline + body + CTA */}
           <div>
-            <Reveal
-              as="p"
-              className="mb-5 font-mono text-[11px] uppercase tracking-[0.14em] text-ink/55"
-            >
-              Independent. Senior. Opinionated.
-            </Reveal>
-
             <Reveal
               as="h2"
               className="mb-10 font-display text-[clamp(36px,5vw,72px)] font-bold leading-[1.05] tracking-[-0.035em] text-ink"
@@ -50,7 +43,7 @@ export function About() {
 
             <Reveal className="space-y-5 text-[17px] leading-[1.6] text-ink/60">
               <p className="max-w-[50ch]">
-                An independent Australian studio. Engineering and brand craft in
+                An expert Australian studio. Engineering and brand craft in
                 the same room, on the same brief. No account managers between
                 you and the people doing the work. Strategists, engineers and
                 designers who have shipped at scale and take responsibility for
@@ -66,7 +59,7 @@ export function About() {
                 href="#"
                 className="mt-7 inline-flex items-center gap-3 border-b border-ink/20 pb-1.5 font-display text-[15px] font-medium text-ink transition-[border-color,padding] duration-150 ease-out hover:border-ink hover:pr-3"
               >
-                Meet the studio <span>→</span>
+                About Us <span>→</span>
               </a>
             </Reveal>
           </div>

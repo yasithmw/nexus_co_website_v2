@@ -5,22 +5,22 @@ const steps = [
   {
     num: "01",
     name: "Sharpen",
-    desc: "A two-week deep dive. We pressure-test the brief, talk to your users, and surface the real problem worth solving.",
+    desc: "We push back on the brief before we accept it. Constraints get mapped, assumptions get tested, and the actual problem gets defined.",
   },
   {
     num: "02",
     name: "Shape",
-    desc: "Architecture, design system, brand foundations. Decisions documented before code is written.",
+    desc: "Wireframes, system design, and brand direction happen in parallel. By the time we write code, every major decision is already documented.",
   },
   {
     num: "03",
     name: "Ship",
-    desc: "Senior engineers building in two-week increments. Working software in your hands from week three.",
+    desc: "Short cycles, early demos, real feedback. You see working software well before we are done, so any course corrections cost days, not months.",
   },
   {
     num: "04",
     name: "Sustain",
-    desc: "We don't disappear at launch. Ongoing optimisation, measurement and a roadmap that grows with you.",
+    desc: "Launch is when real usage data starts. We stay on to monitor, iterate, and keep the product moving. No handoff. No disappearing act.",
   },
 ];
 
