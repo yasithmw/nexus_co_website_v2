@@ -20,6 +20,9 @@
 # production
 /build
 
+# stale nested project copy (build artifacts only)
+/web/
+
 # misc
 .DS_Store
 *.pem

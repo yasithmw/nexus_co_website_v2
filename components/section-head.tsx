@@ -1,11 +1,10 @@
 type Props = {
-  num: string;
   label: string;
   right: string;
   variant?: "light" | "dark";
 };
 
-export function SectionHead({ num, label, right, variant = "light" }: Props) {
+export function SectionHead({ label, right, variant = "light" }: Props) {
   const isDark = variant === "dark";
   return (
     <div
@@ -15,12 +14,7 @@ export function SectionHead({ num, label, right, variant = "light" }: Props) {
           : "border-line text-muted"
       }`}
     >
-      <span>
-        <span className={`font-medium ${isDark ? "text-paper" : "text-ink"}`}>
-          {num} /
-        </span>
-        &nbsp; {label}
-      </span>
+      <span>{label}</span>
       <span>{right}</span>
     </div>
   );

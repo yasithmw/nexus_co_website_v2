@@ -27,7 +27,7 @@ const steps = [
 export function Process() {
   return (
     <section id="process" className="pb-[140px] pt-20">
-      <SectionHead num="05" label="How we work" right="Four phases" />
+      <SectionHead label="How we work" right="Four phases" />
 
       <Reveal
         as="h2"

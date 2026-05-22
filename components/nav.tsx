@@ -79,7 +79,7 @@ export function Nav() {
 
   const staticLinks = [
     { href: "#work", label: "Work" },
-    { href: "#about", label: "About" },
+    { href: "/about", label: "About" },
     { href: "#thinking", label: "Thinking" },
   ];
 
