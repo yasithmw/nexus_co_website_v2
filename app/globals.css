@@ -146,6 +146,15 @@
     transform: none;
   }
 
+  /* Dim-to-bright scroll reveal — starts visible but muted */
+  .reveal-dim {
+    opacity: 0.12;
+    transition: opacity 1.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+  .reveal-dim.in {
+    opacity: 1;
+  }
+
   /* Stroke style for inline line icons */
   .icon-line {
     stroke: currentColor;
