@@ -84,8 +84,8 @@ export function Hero() {
             className="max-w-[520px] animate-rise text-[clamp(18px,1.4vw,22px)] font-normal leading-[1.4] tracking-[-0.01em]"
             style={{ animationDelay: "0.6s" }}
           >
-            <b className="font-medium">Four disciplines. One studio.</b> We pair
-            production-grade engineering with sharp brand thinking — so the
+            <b className="font-medium">Four disciplines. One Place.</b> We pair
+            production grade engineering with sharp brand thinking, so the
             product you ship and the story you tell finally pull in the same
             direction.
           </p>
@@ -94,12 +94,6 @@ export function Hero() {
             className="flex flex-wrap items-center gap-5 animate-rise md:justify-self-end"
             style={{ animationDelay: "0.6s" }}
           >
-            <a
-              href="#showreel"
-              className="group inline-flex items-center gap-3.5 rounded-full bg-ink py-[18px] pl-[22px] pr-[26px] text-[15px] font-medium tracking-[-0.01em] text-paper transition-all duration-200 hover:bg-ink-2 hover:pr-8"
-            >
-              Contact Us
-            </a>
             <a
               href="#work"
               className="group inline-flex items-center gap-2.5 border-b border-ink py-4 text-[15px] font-medium transition-[padding] hover:pr-2"

@@ -78,9 +78,7 @@ export function Nav() {
   };
 
   const staticLinks = [
-    { href: "#work", label: "Work" },
-    { href: "/about", label: "About" },
-    { href: "#thinking", label: "Thinking" },
+    { href: "/about", label: "About Us" },
   ];
 
   return (
@@ -88,7 +86,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-[clamp(20px,4vw,56px)]">
         {/* Logo */}
         <a
-          href="#"
+          href="/"
           className="flex items-center gap-3 font-display text-[19px] font-semibold tracking-[-0.02em]"
         >
           <span className="relative inline-block h-8 w-8">
@@ -109,15 +107,6 @@ export function Nav() {
 
         {/* Nav */}
         <nav className="hidden gap-9 text-[14px] font-medium tracking-[-0.01em] md:flex">
-          {staticLinks.slice(0, 1).map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="relative py-1 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-ink after:transition-[width] after:duration-[350ms] after:ease-[cubic-bezier(0.6,0.2,0.2,1)] hover:after:w-full"
-            >
-              {link.label}
-            </a>
-          ))}
 
           {/* Services with dropdown */}
           <div
@@ -207,7 +196,7 @@ export function Nav() {
             </div>
           </div>
 
-          {staticLinks.slice(1).map((link) => (
+          {staticLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -224,7 +213,7 @@ export function Nav() {
           className="inline-flex items-center gap-2 rounded-full bg-ink px-[18px] py-[10px] text-[13px] font-medium tracking-[-0.01em] text-paper transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-ink-2"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-blue-2" />
-          Start a project
+          Get in Touch
         </a>
       </div>
     </header>
