@@ -2,9 +2,9 @@ import { Reveal } from "../reveal";
 import { SectionHead } from "../section-head";
 
 const stats = [
-  { number: "180+", label: "Products shipped, web to AI" },
-  { number: "98%", label: "Client retention rate" },
-  { number: "12", label: "Years building things that last" },
+  { number: "1", label: "Team, start to finish" },
+  { number: "4", label: "Disciplines under one roof" },
+  { number: "100%", label: "Ownership through delivery" },
 ];
 
 export function About() {
@@ -50,10 +50,10 @@ export function About() {
                 the outcome.
               </p>
               <p className="max-w-[50ch]">
-                Sydney, Melbourne and Brisbane. Building since 2013. The clients
-                who stay, stay for years. That&apos;s not marketing. That&apos;s
-                what happens when the work is good and the team is straight with
-                you.
+                Sydney, Melbourne and Brisbane. We started Nexus Co in 2025
+                because product and brand kept being built by different teams,
+                pointing in different directions. We put them in the same room,
+                on the same brief, with the same goal.
               </p>
               <a
                 href="/about"
