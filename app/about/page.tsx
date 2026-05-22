@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
+import { AboutHero } from "@/components/sections/about-hero";
 import { Contact } from "@/components/sections/contact";
 import { Reveal } from "@/components/reveal";
 import { SectionHead } from "@/components/section-head";
 import { TestimonialsCarousel } from "@/components/sections/testimonials-carousel";
 
 export const metadata: Metadata = {
-  title: "About Nexus Co — Australian B2B Studio Since 2013",
+  title: "About Nexus Co — Australian B2B Studio",
   description:
-    "Nexus Co is an independent Australian studio combining software engineering, data, AI, and brand craft. Sydney, Melbourne, Brisbane, and remote — building since 2013.",
+    "Nexus Co is an independent Australian studio combining software engineering, data, AI, and brand craft. Sydney, Melbourne, Brisbane, and remote.",
 };
 
 // ─── Team data ───────────────────────────────────────────────────────────────
@@ -47,43 +48,12 @@ export default function AboutPage() {
       <Nav />
       <main>
         {/* ── Section 1: Hero ─────────────────────────────────────────────── */}
-        <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden pt-[100px] pb-[80px] text-center md:pt-[120px]">
-          {/* Bloom glows */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute left-1/2 top-[30%] z-0 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-45 blur-[60px]"
-            style={{ background: "var(--color-blue-2)" }}
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute right-[10%] top-[20%] z-0 h-[300px] w-[300px] rounded-full opacity-30 blur-[80px]"
-            style={{ background: "var(--color-blue)" }}
-          />
-
-          <div className="shell relative z-[2] flex flex-col items-center">
-            <div
-              className="animate-rise mb-8 font-mono text-[11px] uppercase tracking-[0.18em] text-muted"
-              style={{ animationDelay: "0.1s" }}
-            >
-              About Nexus Co
-            </div>
-
-            <h1
-              className="animate-rise font-display font-bold tracking-[-0.045em] leading-[0.92] text-ink"
-              style={{ fontSize: "clamp(52px, 9vw, 144px)", animationDelay: "0.18s" }}
-            >
-              We build. We brand.{" "}
-              <em className="font-serif font-normal italic text-blue">
-                We mean it.
-              </em>
-            </h1>
-          </div>
-        </section>
+        <AboutHero />
 
         {/* ── Section 2: Story ────────────────────────────────────────────── */}
         <section className="py-[120px]">
           <div className="shell">
-            <SectionHead label="Our Story" right="Since 2013" />
+            <SectionHead label="Our Story" right="Est. 2025" />
 
             <div className="grid gap-16 md:grid-cols-[1.4fr_1fr] md:gap-10">
               {/* Left: copy */}
@@ -92,7 +62,7 @@ export default function AboutPage() {
                   as="p"
                   className="text-[17px] leading-[1.6] text-ink/70 max-w-[52ch]"
                 >
-                  Nexus Co started in Sydney in 2013 with a simple frustration:
+                  Nexus Co started in Sydney in 2025 with a simple frustration:
                   companies kept hiring two separate agencies — one for the
                   product, one for the brand — and neither talked to the other.
                   The result was software that worked but looked like it
@@ -104,22 +74,23 @@ export default function AboutPage() {
                   as="p"
                   className="text-[17px] leading-[1.6] text-ink/70 max-w-[52ch]"
                 >
-                  Twelve years on, we have studios in Sydney, Melbourne, and
-                  Brisbane, and we work with clients remotely across the globe.
-                  We have shipped more than 180 products — from fintech platforms
-                  and B2B SaaS tools to AI-powered data pipelines and brand
-                  identity systems. Our 98% client retention rate isn&apos;t a
-                  metric we engineered. It&apos;s what happens when the work
-                  holds up and the team is straight with you.
+                  We are a new studio, but not new to the work. Between us, we
+                  have spent years inside product companies, agencies, and
+                  engineering consultancies — shipping fintech platforms, B2B
+                  SaaS tools, AI-powered data pipelines, and brand identity
+                  systems across Australia and internationally. We started Nexus
+                  Co because we wanted to do all of it together, in one place,
+                  without the handoff problems that come from keeping engineering
+                  and creative apart.
                 </Reveal>
                 <Reveal
                   as="p"
                   className="text-[17px] leading-[1.6] text-ink/70 max-w-[52ch]"
                 >
-                  We are still independent. No holding company. No offshore
-                  bench. Just a tight group of senior people who care about the
-                  same things: getting the brief right, doing the work properly,
-                  and shipping something you&apos;re genuinely proud of.
+                  We are independent. No holding company. No offshore bench.
+                  Just a tight group of senior people who care about the same
+                  things: getting the brief right, doing the work properly, and
+                  shipping something you&apos;re genuinely proud of.
                 </Reveal>
               </div>
 
@@ -134,7 +105,7 @@ export default function AboutPage() {
                     color: "rgba(39,24,126,0.06)",
                   }}
                 >
-                  2013
+                  2025
                 </span>
 
                 <div className="relative z-[1] flex flex-col gap-10">
@@ -143,7 +114,7 @@ export default function AboutPage() {
                       Founded
                     </div>
                     <div className="font-display text-[clamp(36px,5vw,60px)] font-bold tracking-[-0.04em] leading-none text-ink">
-                      2013
+                      2025
                     </div>
                   </div>
 
@@ -165,10 +136,13 @@ export default function AboutPage() {
 
                   <div>
                     <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted mb-2">
-                      Products delivered
+                      Disciplines
                     </div>
                     <div className="font-display text-[clamp(28px,4vw,48px)] font-bold tracking-[-0.03em] leading-none text-ink">
-                      180+
+                      4
+                    </div>
+                    <div className="mt-1 font-mono text-[12px] tracking-[0.04em] text-muted">
+                      Engineering · Data · AI · Brand
                     </div>
                   </div>
                 </div>
@@ -178,55 +152,66 @@ export default function AboutPage() {
         </section>
 
         {/* ── Section 3: Philosophy ───────────────────────────────────────── */}
-        <section className="py-[120px]" style={{ background: "#1a1057" }}>
+        <section className="py-[96px]" style={{ background: "#1a1057" }}>
           <div className="shell">
-            <SectionHead label="Philosophy" right="How We Work" variant="dark" />
+            <div className="grid gap-16 md:grid-cols-[1fr_1.1fr] md:gap-12 md:items-start">
 
-            <div className="flex flex-col">
-              <Reveal className="border-t border-white/10 pt-14 pb-14">
-                <p
-                  className="font-display font-bold tracking-[-0.035em] leading-[1.1] text-paper"
-                  style={{ fontSize: "clamp(36px, 5vw, 72px)" }}
+              {/* Left — headline */}
+              <Reveal className="md:sticky md:top-[100px]">
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] mb-6" style={{ color: "rgba(174,184,254,0.5)" }}>
+                  Philosophy
+                </div>
+                <h2
+                  className="font-display font-bold tracking-[-0.04em] leading-[1.05] text-paper"
+                  style={{ fontSize: "clamp(28px, 3.4vw, 50px)" }}
                 >
-                  Senior people. Real work.{" "}
-                  <em className="font-serif font-normal italic text-blue-2">
-                    No account managers
-                  </em>{" "}
-                  between you and the team.
-                </p>
+                  We think before we build.
+                </h2>
               </Reveal>
 
-              <Reveal className="border-t border-white/10 pt-14 pb-14">
-                <p
-                  className="font-display font-bold tracking-[-0.035em] leading-[1.1] text-paper"
-                  style={{ fontSize: "clamp(36px, 5vw, 72px)" }}
-                >
-                  We take responsibility for{" "}
-                  <em className="font-serif font-normal italic text-blue">
-                    outcomes
-                  </em>{" "}
-                  — not just deliverables.
-                </p>
-              </Reveal>
+              {/* Right — numbered statements */}
+              <div className="flex flex-col">
+                {[
+                  {
+                    n: "01",
+                    text: "Most projects fail in the brief. We take that part as seriously as the build itself.",
+                  },
+                  {
+                    n: "02",
+                    text: "The best product decisions are creative ones. The best brand decisions are technical ones. We've never separated the two.",
+                  },
+                  {
+                    n: "03",
+                    text: "Senior people, end to end — not just at the pitch, but through delivery and whatever comes after.",
+                  },
+                ].map((item) => (
+                  <Reveal
+                    key={item.n}
+                    className="border-t py-8 flex gap-6 items-start"
+                    style={{ borderColor: "rgba(255,255,255,0.08)" }}
+                  >
+                    <span
+                      className="font-mono text-[11px] tracking-[0.1em] shrink-0 mt-[0.35em]"
+                      style={{ color: "var(--color-blue-2)" }}
+                    >
+                      {item.n}
+                    </span>
+                    <p
+                      className="font-display font-semibold tracking-[-0.025em] leading-[1.25] text-paper"
+                      style={{ fontSize: "clamp(18px, 1.8vw, 26px)" }}
+                    >
+                      {item.text}
+                    </p>
+                  </Reveal>
+                ))}
+              </div>
 
-              <Reveal className="border-t border-white/10 pt-14 pb-14">
-                <p
-                  className="font-display font-bold tracking-[-0.035em] leading-[1.1] text-paper"
-                  style={{ fontSize: "clamp(36px, 5vw, 72px)" }}
-                >
-                  Engineering and brand craft{" "}
-                  <em className="font-serif font-normal italic text-cream">
-                    in the same room,
-                  </em>{" "}
-                  on the same brief, from day one.
-                </p>
-              </Reveal>
             </div>
           </div>
         </section>
 
         {/* ── Section 4: Mission / Vision / Values ────────────────────────── */}
-        <section className="bg-paper py-[120px]">
+        <section className="bg-paper pt-[120px] pb-[60px]">
           <div className="shell">
             <SectionHead label="What We Stand For" right="Values" />
 
@@ -279,7 +264,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── Section 5: Team Grid ─────────────────────────────────────────── */}
-        <section className="py-[120px]">
+        <section className="pt-[60px] pb-[60px]">
           <div className="shell">
             <SectionHead label="The Team" right="5 people" />
 
@@ -306,22 +291,21 @@ export default function AboutPage() {
         </section>
 
         {/* ── Section 6: Client Logos ──────────────────────────────────────── */}
-        <section className="py-[80px]">
+        <section className="pt-[40px] pb-[80px]">
           <div className="shell">
             <Reveal>
               <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted mb-10">
                 Who we&apos;ve worked with
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-x-[56px] gap-y-8">
+              <div
+                className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-1 [&::-webkit-scrollbar]:hidden"
+                style={{ scrollbarWidth: "none" }}
+              >
                 {Array.from({ length: 6 }).map((_, i) => (
                   <div
                     key={i}
-                    className="flex h-[40px] w-[100px] items-center justify-center rounded-md bg-ink/10 opacity-50"
-                  >
-                    <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink/50">
-                      LOGO
-                    </span>
-                  </div>
+                    className="snap-start shrink-0 w-[200px] aspect-[4/3] rounded-[var(--radius-lg)] bg-paper-2 border border-line"
+                  />
                 ))}
               </div>
             </Reveal>
