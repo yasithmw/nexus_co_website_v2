@@ -66,13 +66,13 @@ export function ServiceOtherServices() {
   return (
     <section className="py-[120px] bg-paper-2">
       <div className="shell">
-        <SectionHead label="Other disciplines" right="Explore more" />
+        <SectionHead label="Other services" right="Explore more" />
 
         <Reveal
           as="h2"
           className="mb-12 font-display font-medium text-[clamp(32px,4vw,56px)] tracking-[-0.03em] leading-[1.0] text-ink"
         >
-          Our other disciplines
+          Our other services
         </Reveal>
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -89,11 +89,6 @@ export function ServiceOtherServices() {
                   <svg viewBox="0 0 24 24" className="h-5 w-5">
                     {svc.iconPath}
                   </svg>
-                </span>
-
-                {/* Number */}
-                <span className="font-mono text-[11px] tracking-[0.1em] text-muted">
-                  {svc.num}
                 </span>
 
                 {/* Name */}

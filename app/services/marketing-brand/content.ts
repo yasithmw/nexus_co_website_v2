@@ -1,6 +1,6 @@
 export const CONTENT = {
   hero: {
-    label: "Marketing & Brand / 01",
+    label: "Marketing & Brand",
     headline: "Brands built to outlast the launch.",
     sub: "Create Lyft handles brand identity, positioning, and performance marketing — with an engineering team in the same building, so what you promise and what you ship are the same thing.",
   },

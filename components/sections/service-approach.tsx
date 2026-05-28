@@ -19,7 +19,7 @@ export function ServiceApproach({ panels }: ServiceApproachProps) {
 
       <div>
         {panels.map((panel, i) => {
-          const isEven = i % 2 !== 0;
+          const imageRight = i % 2 === 0;
           return (
             <div
               key={panel.step}
@@ -28,7 +28,7 @@ export function ServiceApproach({ panels }: ServiceApproachProps) {
               }`}
             >
               {/* Image placeholder */}
-              <div className={isEven ? "md:order-last" : ""}>
+              <div className={imageRight ? "md:order-last" : ""}>
                 <div
                   className="rounded-[var(--radius-lg)] bg-paper-2 border border-line aspect-[4/3] w-full"
                   aria-label={panel.imageAlt}
@@ -38,9 +38,6 @@ export function ServiceApproach({ panels }: ServiceApproachProps) {
 
               {/* Text side */}
               <Reveal className="flex flex-col gap-4">
-                <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-                  Step {panel.step}
-                </span>
                 <h3 className="font-display font-semibold text-[clamp(24px,2.8vw,40px)] tracking-[-0.03em] leading-[1.1] text-ink">
                   {panel.headline}
                 </h3>

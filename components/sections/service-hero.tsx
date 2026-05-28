@@ -81,7 +81,7 @@ export function ServiceHero({ label, headline, sub, accentColor }: ServiceHeroPr
               href="#contact"
               className="group inline-flex items-center gap-2.5 border-b border-ink py-4 text-[15px] font-medium tracking-[-0.01em] transition-[padding] hover:pr-2"
             >
-              Start a project{" "}
+              See the work{" "}
               <span className="transition-transform group-hover:translate-x-1">
                 →
               </span>
