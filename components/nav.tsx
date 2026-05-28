@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 type NavService = {
   name: string;
   desc: string;
+  href: string;
   iconBg: string;
   iconStroke: string;
   iconPath: React.ReactNode;
@@ -14,6 +15,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "Marketing & Brand",
     desc: "Identity, positioning & campaigns",
+    href: "/services/marketing-brand",
     iconBg: "bg-peach",
     iconStroke: "text-ink",
     iconPath: (
@@ -26,6 +28,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "Software Development",
     desc: "Web apps, platforms & tools",
+    href: "#",
     iconBg: "bg-blue-2",
     iconStroke: "text-ink",
     iconPath: (
@@ -38,6 +41,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "AI & Machine Learning",
     desc: "RAG pipelines & automation",
+    href: "#",
     iconBg: "bg-blue",
     iconStroke: "text-paper",
     iconPath: (
@@ -53,6 +57,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "Resource Augmentation",
     desc: "Team extension & flexible staffing",
+    href: "#",
     iconBg: "bg-cream",
     iconStroke: "text-ink",
     iconPath: (
@@ -182,7 +187,7 @@ export function Nav() {
                 {NAV_SERVICES.map((svc) => (
                   <a
                     key={svc.name}
-                    href="#services"
+                    href={svc.href}
                     className="group flex flex-col gap-3 rounded-[14px] bg-white p-4 transition-[background] duration-[200ms] ease-[cubic-bezier(0.6,0.2,0.2,1)] hover:bg-paper"
                   >
                     <span
