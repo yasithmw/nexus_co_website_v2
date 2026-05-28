@@ -3,8 +3,9 @@ import { SectionHead } from "../section-head";
 
 type Service = {
   num: string;
-  name: string;
+  name: React.ReactNode;
   desc: string;
+  href: string;
   iconPath: React.ReactNode;
   iconBg: string;
   iconStroke: string;
@@ -13,8 +14,23 @@ type Service = {
 const services: Service[] = [
   {
     num: "/01",
+    name: <>Marketing &<br />Brand</>,
+    desc: "Brand identity, positioning, campaigns, and performance marketing — designed to be remembered and built to convert when nobody's watching.",
+    href: "/services/marketing-brand",
+    iconBg: "bg-peach",
+    iconStroke: "text-ink",
+    iconPath: (
+      <path
+        className="icon-line"
+        d="M5 19 L19 5 M5 19 L5 13 M5 19 L11 19 M14 5 L19 5 L19 10"
+      />
+    ),
+  },
+  {
+    num: "/02",
     name: "Software Development",
     desc: "End-to-end platforms, web apps, and internal tools built by senior engineers who understand the product — not just the ticket.",
+    href: "#",
     iconBg: "bg-blue-2",
     iconStroke: "text-ink",
     iconPath: (
@@ -22,9 +38,10 @@ const services: Service[] = [
     ),
   },
   {
-    num: "/02",
+    num: "/03",
     name: "AI & Machine Learning",
     desc: "RAG pipelines, prediction models, and intelligent automation. We deploy AI that ships real value in weeks — not conference decks.",
+    href: "#",
     iconBg: "bg-blue",
     iconStroke: "text-paper",
     iconPath: (
@@ -38,28 +55,16 @@ const services: Service[] = [
     ),
   },
   {
-    num: "/03",
-    name: "Data Architecture & Engineering",
-    desc: "Pipelines that don't break at month-end, warehouses built to scale, and dashboards leadership actually trusts. Decisions backed by structure, not gut feel.",
+    num: "/04",
+    name: "Resource Augmentation",
+    desc: "Extend your team with vetted senior engineers. Scale capacity without the overhead of hiring, onboarding, and long-term commitments. Get experienced hands on your critical work in days, not months.",
+    href: "#",
     iconBg: "bg-cream",
     iconStroke: "text-ink",
     iconPath: (
       <path
         className="icon-line"
         d="M4 20 L4 4 M4 20 L20 20 M7 16 L7 12 M11 16 L11 8 M15 16 L15 14 M19 16 L19 6"
-      />
-    ),
-  },
-  {
-    num: "/04",
-    name: "Marketing & Branding",
-    desc: "Brand identity, positioning, campaigns, and performance marketing — designed to be remembered and built to convert when nobody's watching.",
-    iconBg: "bg-peach",
-    iconStroke: "text-ink",
-    iconPath: (
-      <path
-        className="icon-line"
-        d="M5 19 L19 5 M5 19 L5 13 M5 19 L11 19 M14 5 L19 5 L19 10"
       />
     ),
   },
@@ -83,7 +88,7 @@ export function Services() {
         {services.map((svc) => (
           <Reveal key={svc.num}>
             <a
-              href="#"
+              href={svc.href}
               className="group relative grid cursor-pointer items-start gap-8 border-b border-line py-9 transition-[padding,background] duration-[350ms] ease-[cubic-bezier(0.6,0.2,0.2,1)] hover:bg-paper-2 hover:px-4 lg:grid-cols-[80px_1.1fr_2fr]"
             >
               <span className="pt-3 font-mono text-[12px] tracking-[0.1em] text-muted">

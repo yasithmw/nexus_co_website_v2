@@ -5,7 +5,7 @@ import { ContactFormSheet } from "@/components/contact-form-sheet";
 import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
-  title: "Connect — Nexus Co",
+  title: "Connect — Create Lyft",
   description: "Ready to build something remarkable? Let's talk.",
 };
 
@@ -98,10 +98,10 @@ export default function ConnectPage() {
                     We work globally
                   </div>
                   <a
-                    href="mailto:hello@nexusco.com.au"
+                    href="mailto:connect@createlyft.com"
                     className="block font-display text-[15px] font-medium text-ink transition-colors hover:text-blue"
                   >
-                    hello@nexusco.com.au
+                    connect@createlyft.com
                   </a>
                 </div>
 
@@ -126,9 +126,10 @@ export default function ConnectPage() {
                   >
                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
                       <circle cx="16" cy="16" r="15" fill="#27187E" />
-                      <path d="M9 22 L9 10 L23 22 L23 10" stroke="#AEB8FE" strokeWidth="2.4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M10 20 L16 11 L22 20" stroke="#AEB8FE" strokeWidth="2.6" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                      <line x1="12" y1="22.5" x2="20" y2="22.5" stroke="#ff91a4" strokeWidth="2.2" strokeLinecap="round" />
                     </svg>
-                    Nexus Co
+                    Create Lyft
                   </a>
                   <span className="font-mono text-[11px] tracking-[0.05em] text-muted">
                     © 2026{" "}

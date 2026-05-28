@@ -8,6 +8,7 @@ import {
   type ReactNode,
   type TouchEvent as ReactTouchEvent,
 } from "react";
+import { createPortal } from "react-dom";
 
 type SheetState = "closed" | "partial" | "expanded";
 
@@ -20,6 +21,7 @@ export function ContactFormSheet({
 } = {}) {
   const [sheet, setSheet] = useState<SheetState>("closed");
   const [submitted, setSubmitted] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -31,6 +33,8 @@ export function ContactFormSheet({
   const sheetRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const touchStartY = useRef(0);
+
+  useEffect(() => setMounted(true), []);
 
   // Non-passive wheel listener so we can preventDefault when intercepting scroll-up
   useEffect(() => {
@@ -62,14 +66,20 @@ export function ContactFormSheet({
     };
   }, [sheet]);
 
-  // Escape key: expanded → partial, partial → closed
+  // Escape key: expanded → closed
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape")
-        setSheet((s) => (s === "expanded" ? "partial" : "closed"));
+      if (e.key === "Escape") setSheet("closed");
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  // External trigger — any component can dispatch "open-contact-form"
+  useEffect(() => {
+    const onOpen = () => setSheet("expanded");
+    window.addEventListener("open-contact-form", onOpen);
+    return () => window.removeEventListener("open-contact-form", onOpen);
   }, []);
 
   const onTouchStart = (e: ReactTouchEvent) => {
@@ -114,28 +124,12 @@ export function ContactFormSheet({
   const inputClass =
     "w-full border-b border-ink/15 bg-transparent pb-3 text-[16px] tracking-[-0.01em] text-ink placeholder:text-ink/25 focus:border-ink focus:outline-none transition-colors duration-200";
 
-  return (
+  const overlay = (
     <>
-      {/* Trigger */}
-      <button
-        onClick={() => setSheet("partial")}
-        className={
-          triggerVariant === "ink"
-            ? "self-start inline-flex items-center gap-3 rounded-full bg-ink px-8 py-[18px] text-[16px] font-medium tracking-[-0.01em] text-paper transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-ink-2"
-            : "mb-[100px] inline-flex items-center gap-4 rounded-full bg-paper px-[30px] py-[22px] text-[17px] font-medium tracking-[-0.01em] text-ink transition-[padding,transform] duration-200 hover:-translate-y-0.5 hover:pr-10"
-        }
-      >
-        {triggerVariant === "paper" && <span className="h-2 w-2 rounded-full bg-ink" />}
-        {triggerLabel ?? "hello@nexusco.com.au"}
-        <span>→</span>
-      </button>
-
       {/* Backdrop */}
       <div
         aria-hidden
-        onClick={() =>
-          setSheet((s) => (s === "expanded" ? "partial" : "closed"))
-        }
+        onClick={() => setSheet("closed")}
         className={[
           "fixed inset-0 z-[90] bg-ink/40 transition-opacity duration-500",
           sheet === "closed"
@@ -319,6 +313,25 @@ export function ContactFormSheet({
           </div>
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <>
+      {/* Trigger */}
+      <button
+        onClick={() => setSheet("expanded")}
+        className={
+          triggerVariant === "ink"
+            ? "self-start inline-flex items-center gap-3 rounded-full bg-ink px-8 py-[18px] text-[16px] font-medium tracking-[-0.01em] text-paper transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-ink-2"
+            : "mb-[100px] inline-flex items-center gap-4 rounded-full bg-paper px-[30px] py-[22px] text-[17px] font-medium tracking-[-0.01em] text-ink transition-[padding,transform] duration-200 hover:-translate-y-0.5 hover:pr-10"
+        }
+      >
+        {triggerVariant === "paper" && <span className="h-2 w-2 rounded-full bg-ink" />}
+        {triggerLabel ?? "connect@createlyft.com"}
+        <span>→</span>
+      </button>
+      {mounted && createPortal(overlay, document.body)}
     </>
   );
 }

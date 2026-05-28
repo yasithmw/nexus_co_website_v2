@@ -7,7 +7,7 @@ const cols = [
     body: (
       <>
         <div className="mb-2 font-display text-[22px] font-medium tracking-[-0.02em]">
-          Nexus Co Sydney
+          Create Lyft Sydney
         </div>
         <div className="text-[14px] leading-[1.5] opacity-75">
           Level 12, 50 Carrington St
@@ -28,7 +28,7 @@ const cols = [
     items: [
       { label: "Marketing & Branding", href: "#" },
       { label: "Software Development", href: "#" },
-      { label: "Data Architecture & Engineering", href: "#" },
+      { label: "Resource Augmentation", href: "#" },
       { label: "AI & Machine Learning", href: "#" },
     ],
   },
@@ -107,7 +107,7 @@ export function Contact() {
         </div>
 
         <div className="mt-20 flex flex-col gap-3 border-t border-white/10 pt-6 font-mono text-[11px] uppercase tracking-[0.1em] text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 Nexus Co · Independent Australian studio</span>
+          <span>© 2026 Create Lyft · Independent Australian studio</span>
           <span>ABN 00 000 000 000</span>
         </div>
       </div>

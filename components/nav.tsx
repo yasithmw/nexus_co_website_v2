@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 type NavService = {
   name: string;
   desc: string;
+  href: string;
   iconBg: string;
   iconStroke: string;
   iconPath: React.ReactNode;
@@ -12,8 +13,9 @@ type NavService = {
 
 const NAV_SERVICES: NavService[] = [
   {
-    name: "Marketing & Branding",
+    name: "Marketing & Brand",
     desc: "Identity, positioning & campaigns",
+    href: "/services/marketing-brand",
     iconBg: "bg-peach",
     iconStroke: "text-ink",
     iconPath: (
@@ -26,6 +28,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "Software Development",
     desc: "Web apps, platforms & tools",
+    href: "#",
     iconBg: "bg-blue-2",
     iconStroke: "text-ink",
     iconPath: (
@@ -38,6 +41,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "AI & Machine Learning",
     desc: "RAG pipelines & automation",
+    href: "#",
     iconBg: "bg-blue",
     iconStroke: "text-paper",
     iconPath: (
@@ -51,10 +55,11 @@ const NAV_SERVICES: NavService[] = [
     ),
   },
   {
-    name: "Data Architecture",
-    desc: "Pipelines, warehouses & dashboards",
+    name: "Resource Augmentation",
+    desc: "Team extension & flexible staffing",
+    href: "#",
     iconBg: "bg-cream",
-    iconStroke: "text-white",
+    iconStroke: "text-ink",
     iconPath: (
       <path
         className="icon-line"
@@ -92,17 +97,28 @@ export function Nav() {
           <span className="relative inline-block h-8 w-8">
             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
               <circle cx="16" cy="16" r="15" fill="#27187E" />
+              {/* Upward chevron — lift/ascent motif */}
               <path
-                d="M9 22 L9 10 L23 22 L23 10"
+                d="M10 20 L16 11 L22 20"
                 stroke="#AEB8FE"
-                strokeWidth="2.4"
+                strokeWidth="2.6"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
+              {/* Ground accent — the surface being lifted from */}
+              <line
+                x1="12"
+                y1="22.5"
+                x2="20"
+                y2="22.5"
+                stroke="#ff91a4"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
             </svg>
           </span>
-          Nexus Co
+          Create Lyft
         </a>
 
         {/* Nav */}
@@ -171,7 +187,7 @@ export function Nav() {
                 {NAV_SERVICES.map((svc) => (
                   <a
                     key={svc.name}
-                    href="#services"
+                    href={svc.href}
                     className="group flex flex-col gap-3 rounded-[14px] bg-white p-4 transition-[background] duration-[200ms] ease-[cubic-bezier(0.6,0.2,0.2,1)] hover:bg-paper"
                   >
                     <span
