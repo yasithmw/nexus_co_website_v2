@@ -7,9 +7,9 @@ import { SectionHead } from "@/components/section-head";
 import { TestimonialsCarousel } from "@/components/sections/testimonials-carousel";
 
 export const metadata: Metadata = {
-  title: "About Nexus Co — Australian B2B Studio",
+  title: "About Create Lyft — Australian B2B Studio",
   description:
-    "Nexus Co is an independent Australian studio combining software engineering, data, AI, and brand craft. Sydney, Melbourne, Brisbane, and remote.",
+    "Create Lyft is an independent Australian studio combining software engineering, data, AI, and brand craft. Sydney, Melbourne, Brisbane, and remote.",
 };
 
 // ─── Team data ───────────────────────────────────────────────────────────────
@@ -62,7 +62,7 @@ export default function AboutPage() {
                   as="p"
                   className="text-[17px] leading-[1.6] text-ink/70 max-w-[52ch]"
                 >
-                  Nexus Co started in Sydney in 2025 with a simple frustration:
+                  Create Lyft started in Sydney in 2025 with a simple frustration:
                   companies kept hiring two separate agencies — one for the
                   product, one for the brand — and neither talked to the other.
                   The result was software that worked but looked like it
@@ -142,7 +142,7 @@ export default function AboutPage() {
                       4
                     </div>
                     <div className="mt-1 font-mono text-[12px] tracking-[0.04em] text-muted">
-                      Engineering · Data · AI · Brand
+                      Engineering · Resource Augmentation · AI · Brand
                     </div>
                   </div>
                 </div>
