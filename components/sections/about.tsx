@@ -50,7 +50,7 @@ export function About() {
                 the outcome.
               </p>
               <p className="max-w-[50ch]">
-                Sydney, Melbourne and Brisbane. We started Nexus Co in 2025
+                Sydney, Melbourne and Brisbane. We started Create Lyft in 2025
                 because product and brand kept being built by different teams,
                 pointing in different directions. We put them in the same room,
                 on the same brief, with the same goal.
