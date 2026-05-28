@@ -13,8 +13,26 @@ type OtherService = {
   href: string;
 };
 
-// Inline data: the 3 services to show (Marketing & Brand excluded)
-const OTHER_SERVICES: OtherService[] = [
+type ServiceOtherServicesProps = {
+  exclude: string;
+};
+
+// All 4 services — the one matching `exclude` is filtered out at render time
+const ALL_SERVICES: OtherService[] = [
+  {
+    num: "/01",
+    name: "Marketing & Brand",
+    desc: "Brand identity, positioning, campaigns, and performance marketing — designed to be remembered and built to convert when nobody's watching.",
+    iconBg: "bg-peach",
+    iconStroke: "text-ink",
+    iconPath: (
+      <path
+        className="icon-line"
+        d="M5 19 L19 5 M5 19 L5 13 M5 19 L11 19 M14 5 L19 5 L19 10"
+      />
+    ),
+    href: "/services/marketing-brand",
+  },
   {
     num: "/02",
     name: "Software Development",
@@ -62,7 +80,8 @@ const OTHER_SERVICES: OtherService[] = [
   },
 ];
 
-export function ServiceOtherServices() {
+export function ServiceOtherServices({ exclude }: ServiceOtherServicesProps) {
+  const OTHER_SERVICES = ALL_SERVICES.filter((s) => s.name !== exclude);
   return (
     <section className="py-[120px] bg-paper-2">
       <div className="shell">

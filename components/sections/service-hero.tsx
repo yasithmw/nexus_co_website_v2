@@ -5,9 +5,12 @@ type ServiceHeroProps = {
   headline: string;
   sub: string;
   accentColor: string;
+  iconPath: React.ReactNode;
+  iconBg: string;
+  iconStroke?: string;
 };
 
-export function ServiceHero({ label, headline, sub, accentColor }: ServiceHeroProps) {
+export function ServiceHero({ label, headline, sub, accentColor, iconPath, iconBg, iconStroke = "text-ink" }: ServiceHeroProps) {
   // Split headline to italicise the final word for typographic interest
   const words = headline.split(" ");
   const lastWord = words[words.length - 1];
@@ -42,15 +45,12 @@ export function ServiceHero({ label, headline, sub, accentColor }: ServiceHeroPr
 
       {/* Icon badge */}
       <div
-        className="relative z-[2] mb-8 animate-rise inline-flex h-12 w-12 items-center justify-center rounded-[12px] bg-peach text-ink"
+        className={`relative z-[2] mb-8 animate-rise inline-flex h-12 w-12 items-center justify-center rounded-[12px] ${iconBg} ${iconStroke}`}
         style={{ animationDelay: "0.2s" }}
         aria-hidden
       >
         <svg viewBox="0 0 24 24" className="h-6 w-6">
-          <path
-            className="icon-line"
-            d="M5 19 L19 5 M5 19 L5 13 M5 19 L11 19 M14 5 L19 5 L19 10"
-          />
+          {iconPath}
         </svg>
       </div>
 

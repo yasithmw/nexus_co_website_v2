@@ -1,10 +1,13 @@
 "use client";
 
-type TestimonialItem = {
+import type { ReactNode } from "react";
+
+export type TestimonialItem = {
   quote: string;
   name: string;
   company: string;
   bg: string;
+  visual?: ReactNode;
 };
 
 type ServiceTestimonialsStackProps = {
@@ -24,13 +27,17 @@ export function ServiceTestimonialsStack({
         >
           <div className="mx-auto w-full max-w-[1440px]">
             <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
-              {/* Left: image placeholder */}
+              {/* Left: visual */}
               <div className="flex items-center justify-center">
-                <div
-                  className="rounded-[var(--radius-lg)] border border-ink/10 aspect-square w-full max-w-[420px]"
-                  style={{ backgroundColor: "rgba(39,24,126,0.06)" }}
-                  aria-hidden
-                />
+                <div className="rounded-[var(--radius-lg)] border border-ink/15 aspect-square w-full max-w-[420px] overflow-hidden">
+                  {item.visual ?? (
+                    <div
+                      className="w-full h-full"
+                      style={{ backgroundColor: "rgba(39,24,126,0.06)" }}
+                      aria-hidden
+                    />
+                  )}
+                </div>
               </div>
 
               {/* Right: quote */}
