@@ -30,7 +30,7 @@ const services: Service[] = [
     num: "/02",
     name: "Software Development",
     desc: "End-to-end platforms, web apps, and internal tools built by senior engineers who understand the product — not just the ticket.",
-    href: "#",
+    href: "/services/software-development",
     iconBg: "bg-blue-2",
     iconStroke: "text-ink",
     iconPath: (
@@ -41,7 +41,7 @@ const services: Service[] = [
     num: "/03",
     name: "AI & Machine Learning",
     desc: "RAG pipelines, prediction models, and intelligent automation. We deploy AI that ships real value in weeks — not conference decks.",
-    href: "#",
+    href: "/services/ai-machine-learning",
     iconBg: "bg-blue",
     iconStroke: "text-paper",
     iconPath: (
@@ -58,7 +58,7 @@ const services: Service[] = [
     num: "/04",
     name: "Resource Augmentation",
     desc: "Extend your team with vetted senior engineers. Scale capacity without the overhead of hiring, onboarding, and long-term commitments. Get experienced hands on your critical work in days, not months.",
-    href: "#",
+    href: "/services/resource-augmentation",
     iconBg: "bg-cream",
     iconStroke: "text-ink",
     iconPath: (

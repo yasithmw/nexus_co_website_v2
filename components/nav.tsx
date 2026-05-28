@@ -28,7 +28,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "Software Development",
     desc: "Web apps, platforms & tools",
-    href: "#",
+    href: "/services/software-development",
     iconBg: "bg-blue-2",
     iconStroke: "text-ink",
     iconPath: (
@@ -41,7 +41,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "AI & Machine Learning",
     desc: "RAG pipelines & automation",
-    href: "#",
+    href: "/services/ai-machine-learning",
     iconBg: "bg-blue",
     iconStroke: "text-paper",
     iconPath: (
@@ -57,7 +57,7 @@ const NAV_SERVICES: NavService[] = [
   {
     name: "Resource Augmentation",
     desc: "Team extension & flexible staffing",
-    href: "#",
+    href: "/services/resource-augmentation",
     iconBg: "bg-cream",
     iconStroke: "text-ink",
     iconPath: (

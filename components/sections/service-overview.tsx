@@ -12,6 +12,7 @@ type ServiceOverviewProps = {
   body: string;
   features: FeatureItem[];
   bg?: string;
+  dark?: boolean;
 };
 
 export function ServiceOverview({
@@ -19,7 +20,15 @@ export function ServiceOverview({
   body,
   features,
   bg = "#fbe4d2",
+  dark = false,
 }: ServiceOverviewProps) {
+  const headlineColor = dark ? "text-paper" : "text-ink";
+  const bodyColor = dark ? "text-paper/70" : "text-ink/70";
+  const featureTitleColor = dark ? "text-paper" : "text-ink";
+  const featureDescColor = dark ? "text-paper/65" : "text-ink/65";
+  const iconColor = dark ? "text-paper" : "text-ink";
+  const borderColor = dark ? "border-paper/15" : "border-ink/15";
+
   return (
     <section
       className="relative py-[120px]"
@@ -29,7 +38,7 @@ export function ServiceOverview({
         {/* Headline */}
         <Reveal
           as="h2"
-          className="font-display font-bold text-[clamp(40px,6vw,88px)] tracking-[-0.04em] leading-[0.95] text-ink mb-6"
+          className={`font-display font-bold text-[clamp(40px,6vw,88px)] tracking-[-0.04em] leading-[0.95] ${headlineColor} mb-6`}
         >
           {headline}
         </Reveal>
@@ -37,7 +46,7 @@ export function ServiceOverview({
         {/* Body paragraph */}
         <Reveal
           as="p"
-          className="text-[18px] leading-[1.6] text-ink/70 max-w-[60ch] mb-16"
+          className={`text-[18px] leading-[1.6] ${bodyColor} max-w-[60ch] mb-16`}
         >
           {body}
         </Reveal>
@@ -47,22 +56,22 @@ export function ServiceOverview({
           {features.map((feature, i) => (
             <Reveal
               key={i}
-              className="border-t border-ink/15 pt-8 pb-8 lg:pr-10"
+              className={`border-t ${borderColor} pt-8 pb-8 lg:pr-10`}
             >
               {/* Icon */}
-              <div className="text-ink">
+              <div className={iconColor}>
                 <svg viewBox="0 0 24 24" className="h-6 w-6">
                   {feature.icon}
                 </svg>
               </div>
 
               {/* Title */}
-              <div className="mt-6 font-display font-semibold text-[17px] tracking-[-0.02em] text-ink">
+              <div className={`mt-6 font-display font-semibold text-[17px] tracking-[-0.02em] ${featureTitleColor}`}>
                 {feature.title}
               </div>
 
               {/* Desc */}
-              <p className="text-[14px] leading-[1.5] text-ink/65 mt-2">
+              <p className={`text-[14px] leading-[1.5] ${featureDescColor} mt-2`}>
                 {feature.desc}
               </p>
             </Reveal>
