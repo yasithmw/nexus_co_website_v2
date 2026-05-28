@@ -22,9 +22,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Nexus Co — Software, AI, BI & Brand. Built as one.",
+  title: "Create Lyft — Software, AI, BI & Brand. Built as one.",
   description:
-    "Nexus Co is an Australian software, AI, BI and brand studio. We build the things that move your business forward.",
+    "Create Lyft is an Australian software, AI, BI and brand studio. We build the things that move your business forward.",
 };
 
 export default function RootLayout({

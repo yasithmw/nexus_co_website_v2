@@ -5,7 +5,7 @@ import { useState, useCallback } from "react";
 const TESTIMONIALS = [
   {
     quote:
-      "Nexus Co rebuilt our data pipeline and our brand identity at the same time. Most studios can't do one well. They did both, and neither looked like it was an afterthought.",
+      "Create Lyft rebuilt our data pipeline and our brand identity at the same time. Most studios can't do one well. They did both, and neither looked like it was an afterthought.",
     name: "Priya Nambiar",
     company: "Clearform Financial",
     bg: "#758bfd",
