@@ -1,7 +1,7 @@
 import { StarIcon } from "../icons";
 
 const tickerItems = [
-  "Marketing & Branding",
+  "Marketing & Brand",
   "Software Development",
   "Resource Augmentation",
   "AI & Machine Learning",
