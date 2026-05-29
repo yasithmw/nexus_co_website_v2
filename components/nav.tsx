@@ -83,7 +83,8 @@ export function Nav() {
   };
 
   const staticLinks = [
-    { href: "/about", label: "About Us" },
+    { href: "/work", label: "Work" },
+    { href: "/blog", label: "Thinking" },
   ];
 
   return (
@@ -123,6 +124,14 @@ export function Nav() {
 
         {/* Nav */}
         <nav className="hidden gap-9 text-[14px] font-medium tracking-[-0.01em] md:flex">
+
+          {/* About Us */}
+          <a
+            href="/about"
+            className="relative py-1 after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-ink after:transition-[width] after:duration-[350ms] after:ease-[cubic-bezier(0.6,0.2,0.2,1)] hover:after:w-full"
+          >
+            About Us
+          </a>
 
           {/* Services with dropdown */}
           <div
