@@ -11,7 +11,7 @@ import { Contact } from "@/components/sections/contact";
 import { CONTENT } from "./content";
 
 export const metadata: Metadata = {
-  title: "Resource Augmentation — Create Lyft",
+  title: "Resource Augmentation — CreateLyft",
   description: CONTENT.hero.sub,
 };
 
@@ -466,7 +466,7 @@ const testimonialVisual1: ReactNode = (
 
 // Visual 2 — Sarah Thornton / hiring failure then success — Card bg: #aeb8fe
 // Two paths: long winding dashed path (traditional hiring, dead-end) vs
-// short direct solid path (Create Lyft, 1 week, reaches destination).
+// short direct solid path (CreateLyft, 1 week, reaches destination).
 // White shapes on blue card.
 const testimonialVisual2: ReactNode = (
   <div className="w-full h-full" style={{ backgroundColor: "#aeb8fe" }}>
@@ -514,7 +514,7 @@ const testimonialVisual2: ReactNode = (
         2 MONTHS
       </text>
 
-      {/* Create Lyft path — short, direct, solid line */}
+      {/* CreateLyft path — short, direct, solid line */}
       <path
         d="M60 210 L340 210"
         fill="none"
@@ -575,7 +575,7 @@ const testimonialVisual2: ReactNode = (
 );
 
 // Visual 3 — James Okafor / long-term embedded engineer — Card bg: #e8e9f0
-// Venn diagram: "Your Team" and "Create Lyft Engineer" circles with
+// Venn diagram: "Your Team" and "CreateLyft Engineer" circles with
 // significant overlap, shared attributes in the intersection.
 const testimonialVisual3: ReactNode = (
   <div className="w-full h-full" style={{ backgroundColor: "#e8e9f0" }}>
@@ -602,7 +602,7 @@ const testimonialVisual3: ReactNode = (
       {/* Circle A — Your Team */}
       <circle cx="162" cy="200" r="110" fill="rgba(39,24,126,0.06)" stroke="rgba(39,24,126,0.18)" strokeWidth="1.4" />
 
-      {/* Circle B — Create Lyft Engineer */}
+      {/* Circle B — CreateLyft Engineer */}
       <circle cx="258" cy="200" r="110" fill="rgba(255,145,164,0.08)" stroke="rgba(255,145,164,0.30)" strokeWidth="1.4" />
 
       {/* Intersection fill */}
@@ -732,7 +732,7 @@ export default function ResourceAugmentationPage() {
         <ServiceOtherServices exclude="Resource Augmentation" />
 
         {/* Contact */}
-        <Contact />
+        <Contact service="resource-augmentation" />
       </main>
     </>
   );

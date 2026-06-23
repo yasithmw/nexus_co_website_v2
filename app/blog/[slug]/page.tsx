@@ -38,9 +38,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
-  if (!post) return { title: "Not Found — Create Lyft" };
+  if (!post) return { title: "Not Found — CreateLyft" };
   return {
-    title: `${post.title} — Create Lyft`,
+    title: `${post.title} — CreateLyft`,
     description: post.excerpt,
   };
 }

@@ -119,7 +119,7 @@ export function Nav() {
               />
             </svg>
           </span>
-          Create Lyft
+          CreateLyft
         </a>
 
         {/* Nav */}

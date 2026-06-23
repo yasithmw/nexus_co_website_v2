@@ -11,7 +11,7 @@ import { Contact } from "@/components/sections/contact";
 import { CONTENT } from "./content";
 
 export const metadata: Metadata = {
-  title: "AI & Machine Learning — Create Lyft",
+  title: "AI & Machine Learning — CreateLyft",
   description: CONTENT.hero.sub,
 };
 
@@ -556,7 +556,7 @@ export default function AIMachineLearningPage() {
         <ServiceOtherServices exclude="AI & Machine Learning" />
 
         {/* Contact */}
-        <Contact />
+        <Contact service="ai-machine-learning" />
       </main>
     </>
   );

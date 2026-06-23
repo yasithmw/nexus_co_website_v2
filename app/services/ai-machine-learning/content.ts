@@ -2,7 +2,7 @@ export const CONTENT = {
   hero: {
     label: "AI & Machine Learning",
     headline: "AI that ships. Not AI that slides.",
-    sub: "Create Lyft builds RAG pipelines, prediction models, and intelligent automation that go into production — not into a staging environment where promising projects go to be forgotten. We've never handed over a proof of concept and called it a day.",
+    sub: "CreateLyft builds RAG pipelines, prediction models, and intelligent automation that go into production — not into a staging environment where promising projects go to be forgotten. We've never handed over a proof of concept and called it a day.",
   },
 
   overview: {
@@ -51,17 +51,17 @@ export const CONTENT = {
 
   testimonials: [
     {
-      quote: "We're a mid-size legal firm. We had four years of matter files sitting in a document management system and no way to query across them. Create Lyft built a retrieval system in nine weeks that lets our lawyers ask plain-English questions and get answers with source citations. The accuracy rate is 94% on our test set, and it's been running in production for seven months without a meaningful failure.",
+      quote: "We're a mid-size legal firm. We had four years of matter files sitting in a document management system and no way to query across them. CreateLyft built a retrieval system in nine weeks that lets our lawyers ask plain-English questions and get answers with source citations. The accuracy rate is 94% on our test set, and it's been running in production for seven months without a meaningful failure.",
       name: "Catherine Drummond",
       company: "Drummond & Hale Lawyers",
     },
     {
-      quote: "We were manually reviewing 1,200 supplier invoices a month — a three-person job. Create Lyft built a classification and extraction model that handles 87% of them without human review. The remaining 13% get flagged for a second look. That freed up two full-time roles within the first quarter. The model's been in production for eight months and accuracy has improved, not declined.",
+      quote: "We were manually reviewing 1,200 supplier invoices a month — a three-person job. CreateLyft built a classification and extraction model that handles 87% of them without human review. The remaining 13% get flagged for a second look. That freed up two full-time roles within the first quarter. The model's been in production for eight months and accuracy has improved, not declined.",
       name: "Marcus Teo",
       company: "Bellwether Procurement",
     },
     {
-      quote: "I'll be straight — I came in thinking AI projects were a way for consultants to run up large bills and deliver a slide deck. We'd been burned before. Create Lyft's process was the opposite: two weeks of discovery, a clear go/no-go recommendation, and a fixed-price build if we proceeded. We proceeded. The churn prediction model reduced customer attrition by 22% in six months. I've since referred three people to them.",
+      quote: "I'll be straight — I came in thinking AI projects were a way for consultants to run up large bills and deliver a slide deck. We'd been burned before. CreateLyft's process was the opposite: two weeks of discovery, a clear go/no-go recommendation, and a fixed-price build if we proceeded. We proceeded. The churn prediction model reduced customer attrition by 22% in six months. I've since referred three people to them.",
       name: "Renata Kowalski",
       company: "Fieldstone SaaS",
     },

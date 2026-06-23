@@ -7,9 +7,9 @@ import { Contact } from "@/components/sections/contact"
 import { BLOG_POSTS } from "@/data/blog-posts"
 
 export const metadata: Metadata = {
-  title: "Thinking — Create Lyft",
+  title: "Thinking — CreateLyft",
   description:
-    "Ideas and perspectives on software, design, AI, and how we build — from the team at Create Lyft.",
+    "Ideas and perspectives on software, design, AI, and how we build — from the team at CreateLyft.",
 }
 
 const POSTS_PER_PAGE = 9

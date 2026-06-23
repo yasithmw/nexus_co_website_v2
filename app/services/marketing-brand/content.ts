@@ -2,7 +2,7 @@ export const CONTENT = {
   hero: {
     label: "Marketing & Brand",
     headline: "Brands built to outlast the launch.",
-    sub: "Create Lyft handles brand identity, positioning, and performance marketing — with an engineering team in the same building, so what you promise and what you ship are the same thing.",
+    sub: "CreateLyft handles brand identity, positioning, and performance marketing — with an engineering team in the same building, so what you promise and what you ship are the same thing.",
   },
 
   overview: {
@@ -51,7 +51,7 @@ export const CONTENT = {
 
   testimonials: [
     {
-      quote: "We'd been through two brand agencies in three years and ended up with a logo we hated and a slide deck nobody used. Create Lyft ran the whole process in eleven weeks, got our leadership team to agree on positioning for the first time, and delivered a system the team actually applies consistently.",
+      quote: "We'd been through two brand agencies in three years and ended up with a logo we hated and a slide deck nobody used. CreateLyft ran the whole process in eleven weeks, got our leadership team to agree on positioning for the first time, and delivered a system the team actually applies consistently.",
       name: "Priya Mehta",
       company: "Atticus Compliance",
     },
@@ -90,7 +90,7 @@ export const CONTENT = {
     },
     {
       q: "How does the engineering and brand integration actually work?",
-      a: "Create Lyft runs engineering and creative under one roof, which means your brand guidelines inform the actual component library, not just a PDF. When the visual system is built, we build it into the product too — consistent type scales, colour tokens, interaction patterns. It's not a separate handoff; it's one continuous process. This is the thing that tends to surprise clients most.",
+      a: "CreateLyft runs engineering and creative under one roof, which means your brand guidelines inform the actual component library, not just a PDF. When the visual system is built, we build it into the product too — consistent type scales, colour tokens, interaction patterns. It's not a separate handoff; it's one continuous process. This is the thing that tends to surprise clients most.",
     },
   ],
 } as const;

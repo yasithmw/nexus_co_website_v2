@@ -7,9 +7,9 @@ import { Contact } from "@/components/sections/contact"
 import { WORK_PROJECTS } from "@/data/work-projects"
 
 export const metadata: Metadata = {
-  title: "Work — Create Lyft",
+  title: "Work — CreateLyft",
   description:
-    "Selected work by Create Lyft — software, AI, and brand projects for forward-thinking clients.",
+    "Selected work by CreateLyft — software, AI, and brand projects for forward-thinking clients.",
 }
 
 export default function WorkPage() {
