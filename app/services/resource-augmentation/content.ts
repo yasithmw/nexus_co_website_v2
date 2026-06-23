@@ -51,17 +51,17 @@ export const CONTENT = {
 
   testimonials: [
     {
-      quote: "We had four weeks to deliver a payment integration before our enterprise client went live. Our team was already at capacity. Create Lyft placed a senior backend engineer within three days — he was in our Jira and pushing code by day two. We shipped on time. I don't think we would have without him.",
+      quote: "We had four weeks to deliver a payment integration before our enterprise client went live. Our team was already at capacity. CreateLyft placed a senior backend engineer within three days — he was in our Jira and pushing code by day two. We shipped on time. I don't think we would have without him.",
       name: "Marcus Leung",
       company: "Parafin Financial",
     },
     {
-      quote: "We spent two months trying to hire a senior infrastructure engineer through the usual channels. Three offers, two rejections, one no-show on start date. A colleague suggested Create Lyft. We had someone embedded within a week. We ended up keeping him on for seven months. I'm still annoyed we wasted so much time recruiting first.",
+      quote: "We spent two months trying to hire a senior infrastructure engineer through the usual channels. Three offers, two rejections, one no-show on start date. A colleague suggested CreateLyft. We had someone embedded within a week. We ended up keeping him on for seven months. I'm still annoyed we wasted so much time recruiting first.",
       name: "Sarah Thornton",
       company: "Radia Health",
     },
     {
-      quote: "We've had a Create Lyft engineer embedded with our platform team for almost a year now. She's not a contractor who turns up and does tickets — she runs our infrastructure guild, mentors two of our junior engineers, and has more context on our architecture than most of the permanent team. It's a better arrangement than another headcount would have been.",
+      quote: "We've had a CreateLyft engineer embedded with our platform team for almost a year now. She's not a contractor who turns up and does tickets — she runs our infrastructure guild, mentors two of our junior engineers, and has more context on our architecture than most of the permanent team. It's a better arrangement than another headcount would have been.",
       name: "James Okafor",
       company: "Stackline Commerce",
     },
@@ -90,7 +90,7 @@ export const CONTENT = {
     },
     {
       q: "How do embedded engineers work with our existing team, tools, and processes?",
-      a: "They use your tools, attend your meetings, and follow your processes — not ours. We ask for a brief onboarding document and access to your environment, and then the engineer slots into your team like any other hire would. We don't impose a Create Lyft way of working. The only visible difference is who signs their contract.",
+      a: "They use your tools, attend your meetings, and follow your processes — not ours. We ask for a brief onboarding document and access to your environment, and then the engineer slots into your team like any other hire would. We don't impose a CreateLyft way of working. The only visible difference is who signs their contract.",
     },
   ],
 } as const;

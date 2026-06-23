@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { Nav } from "@/components/nav";
-import { ContactFormSheet } from "@/components/contact-form-sheet";
+import { ContactFormSheetEnhanced } from "@/components/contact-form-sheet-enhanced";
 import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
-  title: "Connect — Create Lyft",
+  title: "Connect — CreateLyft",
   description: "Ready to build something remarkable? Let's talk.",
 };
 
@@ -82,7 +82,7 @@ export default function ConnectPage() {
                   </em>
                 </Reveal>
 
-                <ContactFormSheet triggerVariant="ink" triggerLabel="Submit a brief" />
+                <ContactFormSheetEnhanced triggerVariant="ink" triggerLabel="Submit a brief" />
               </div>
 
               <div className="hidden items-start justify-end md:flex">
@@ -129,7 +129,7 @@ export default function ConnectPage() {
                       <path d="M10 20 L16 11 L22 20" stroke="#AEB8FE" strokeWidth="2.6" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                       <line x1="12" y1="22.5" x2="20" y2="22.5" stroke="#ff91a4" strokeWidth="2.2" strokeLinecap="round" />
                     </svg>
-                    Create Lyft
+                    CreateLyft
                   </a>
                   <span className="font-mono text-[11px] tracking-[0.05em] text-muted">
                     © 2026{" "}

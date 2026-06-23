@@ -11,7 +11,7 @@ import { Contact } from "@/components/sections/contact";
 import { CONTENT } from "./content";
 
 export const metadata: Metadata = {
-  title: "Marketing & Brand — Create Lyft",
+  title: "Marketing & Brand — CreateLyft",
   description: CONTENT.hero.sub,
 };
 
@@ -254,7 +254,7 @@ export default function MarketingBrandPage() {
         <ServiceOtherServices exclude="Marketing & Brand" />
 
         {/* Contact */}
-        <Contact />
+        <Contact service="marketing-brand" />
       </main>
     </>
   );

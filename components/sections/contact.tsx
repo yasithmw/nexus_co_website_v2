@@ -1,4 +1,4 @@
-import { ContactFormSheet } from "../contact-form-sheet";
+import { ContactFormSheetEnhanced } from "../contact-form-sheet-enhanced";
 import { Reveal } from "../reveal";
 
 const cols = [
@@ -7,7 +7,7 @@ const cols = [
     body: (
       <>
         <div className="mb-2 font-display text-[22px] font-medium tracking-[-0.02em]">
-          Create Lyft Sydney
+          CreateLyft Sydney
         </div>
         <div className="text-[14px] leading-[1.5] opacity-75">
           Level 12, 50 Carrington St
@@ -43,7 +43,13 @@ const cols = [
   },
 ];
 
-export function Contact() {
+type ServiceKey =
+  | "marketing-brand"
+  | "software-development"
+  | "ai-machine-learning"
+  | "resource-augmentation";
+
+export function Contact({ service }: { service?: ServiceKey } = {}) {
   return (
     <section
       id="contact"
@@ -74,7 +80,7 @@ export function Contact() {
           </em>
         </Reveal>
 
-        <ContactFormSheet />
+        <ContactFormSheetEnhanced initialService={service} />
 
         <div className="grid gap-14 border-t border-white/20 pt-[60px] sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           {cols.map((col) => (
@@ -107,7 +113,7 @@ export function Contact() {
         </div>
 
         <div className="mt-20 flex flex-col gap-3 border-t border-white/10 pt-6 font-mono text-[11px] uppercase tracking-[0.1em] text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 Create Lyft · Independent Australian studio</span>
+          <span>© 2026 CreateLyft · Independent Australian studio</span>
           <span>ABN 00 000 000 000</span>
         </div>
       </div>

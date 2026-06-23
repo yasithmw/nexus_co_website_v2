@@ -7,9 +7,9 @@ import { SectionHead } from "@/components/section-head";
 import { TestimonialsCarousel } from "@/components/sections/testimonials-carousel";
 
 export const metadata: Metadata = {
-  title: "About Create Lyft — Australian B2B Studio",
+  title: "About CreateLyft — Australian B2B Studio",
   description:
-    "Create Lyft is an independent Australian studio combining software engineering, data, AI, and brand craft. Sydney, Melbourne, Brisbane, and remote.",
+    "CreateLyft is an independent Australian studio combining software engineering, data, AI, and brand craft. Sydney, Melbourne, Brisbane, and remote.",
 };
 
 // ─── Team data ───────────────────────────────────────────────────────────────
@@ -62,7 +62,7 @@ export default function AboutPage() {
                   as="p"
                   className="text-[17px] leading-[1.6] text-ink/70 max-w-[52ch]"
                 >
-                  Create Lyft started in Sydney in 2025 with a simple frustration:
+                  CreateLyft started in Sydney in 2025 with a simple frustration:
                   companies kept hiring two separate agencies — one for the
                   product, one for the brand — and neither talked to the other.
                   The result was software that worked but looked like it

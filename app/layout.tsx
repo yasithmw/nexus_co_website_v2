@@ -22,9 +22,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Create Lyft — Software, AI, BI & Brand. Built as one.",
+  title: "CreateLyft — Software, AI, BI & Brand. Built as one.",
   description:
-    "Create Lyft is an Australian software, AI, BI and brand studio. We build the things that move your business forward.",
+    "CreateLyft is an Australian software, AI, BI and brand studio. We build the things that move your business forward.",
 };
 
 export default function RootLayout({

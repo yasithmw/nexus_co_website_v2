@@ -6,9 +6,9 @@ import { WorkCard } from "@/components/sections/work-card"
 import { WORK_PROJECTS } from "@/data/work-projects"
 
 export const metadata: Metadata = {
-  title: "Dataline Finance — Create Lyft",
+  title: "Dataline Finance — CreateLyft",
   description:
-    "How Create Lyft built a fintech data platform for Dataline Finance — ingestion pipelines, analytics product, and financial data modelling.",
+    "How CreateLyft built a fintech data platform for Dataline Finance — ingestion pipelines, analytics product, and financial data modelling.",
 }
 
 // ── Hero visual — full dashboard mockup ──────────────────────────────────────

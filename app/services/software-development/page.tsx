@@ -11,7 +11,7 @@ import { Contact } from "@/components/sections/contact";
 import { CONTENT } from "./content";
 
 export const metadata: Metadata = {
-  title: "Software Development — Create Lyft",
+  title: "Software Development — CreateLyft",
   description: CONTENT.hero.sub,
 };
 
@@ -487,7 +487,7 @@ export default function SoftwareDevelopmentPage() {
         <ServiceOtherServices exclude="Software Development" />
 
         {/* Contact */}
-        <Contact />
+        <Contact service="software-development" />
       </main>
     </>
   );

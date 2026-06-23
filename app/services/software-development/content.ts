@@ -2,7 +2,7 @@ export const CONTENT = {
   hero: {
     label: "Software Development",
     headline: "Code that ships. Products that work.",
-    sub: "Create Lyft builds platforms, web apps, and internal tools with senior engineers who understand the product — not just the ticket. No offshore bench, no junior-heavy teams handed a spec and left to guess.",
+    sub: "CreateLyft builds platforms, web apps, and internal tools with senior engineers who understand the product — not just the ticket. No offshore bench, no junior-heavy teams handed a spec and left to guess.",
   },
 
   overview: {
@@ -51,12 +51,12 @@ export const CONTENT = {
 
   testimonials: [
     {
-      quote: "We'd burned six months and a significant budget with an offshore team that delivered something that technically worked but wasn't anything like what we'd described. Create Lyft came in, ran a two-week discovery sprint, and rebuilt the core platform in four months. It's been in production for eighteen months without a major incident.",
+      quote: "We'd burned six months and a significant budget with an offshore team that delivered something that technically worked but wasn't anything like what we'd described. CreateLyft came in, ran a two-week discovery sprint, and rebuilt the core platform in four months. It's been in production for eighteen months without a major incident.",
       name: "Marcus Leung",
       company: "Vantage Financial Technology",
     },
     {
-      quote: "We needed a set of internal tools to replace a spreadsheet-based process our ops team had outgrown. I expected a long requirements document and a six-month build. Create Lyft scoped it properly, pushed back on two things we thought we needed but didn't, and shipped a working system in eight weeks. The team adopted it immediately because it was actually built around how they work.",
+      quote: "We needed a set of internal tools to replace a spreadsheet-based process our ops team had outgrown. I expected a long requirements document and a six-month build. CreateLyft scoped it properly, pushed back on two things we thought we needed but didn't, and shipped a working system in eight weeks. The team adopted it immediately because it was actually built around how they work.",
       name: "Sarah Kowalski",
       company: "Meridian Logistics Group",
     },
