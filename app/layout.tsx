@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable}`}
+      className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} scroll-smooth`}
     >
       <body>{children}</body>
     </html>

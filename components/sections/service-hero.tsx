@@ -78,7 +78,7 @@ export function ServiceHero({ label, headline, sub, accentColor, iconPath, iconB
             style={{ animationDelay: "0.55s" }}
           >
             <a
-              href="#contact"
+              href="/work"
               className="group inline-flex items-center gap-2.5 border-b border-ink py-4 text-[15px] font-medium tracking-[-0.01em] transition-[padding] hover:pr-2"
             >
               See the work{" "}

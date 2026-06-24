@@ -36,24 +36,24 @@ export function About() {
               as="h2"
               className="mb-10 font-display text-[clamp(36px,5vw,72px)] font-bold leading-[1.05] tracking-[-0.035em] text-ink"
             >
-              Hard problems.{" "}
-              <em className="font-serif font-normal italic">Senior people.</em>{" "}
-              Real work.
+              Complex challenges.{" "}
+              <em className="font-serif font-normal italic">Senior operators.</em>{" "}
+              End-to-end ownership.
             </Reveal>
 
             <Reveal className="space-y-5 text-[17px] leading-[1.6] text-ink/60">
               <p className="max-w-[50ch]">
-                An expert Australian studio. Engineering and brand craft in
-                the same room, on the same brief. No account managers between
-                you and the people doing the work. Strategists, engineers and
-                designers who have shipped at scale and take responsibility for
-                the outcome.
+                An expert Australian studio. Brand craft and engineering in
+                the same room, on the same brief. Direct access to the
+                strategists, engineers and designers shaping the work.
+                Experienced teams who have delivered at scale and take
+                responsibility for the outcome.
               </p>
               <p className="max-w-[50ch]">
-                Sydney, Melbourne and Brisbane. We started CreateLyft in 2025
-                because product and brand kept being built by different teams,
-                pointing in different directions. We put them in the same room,
-                on the same brief, with the same goal.
+                Brand pulls one way. Product pulls another. Most businesses
+                just learn to live with the gap. We started CreateLyft in 2025
+                to close it - putting brand and product in the same room, on
+                the same brief, pointing in the same direction.
               </p>
               <a
                 href="/about"

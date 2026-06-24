@@ -5,9 +5,9 @@ import { useEffect, useRef } from "react";
 type Line = { text: string; maxOpacity: number; color?: string };
 
 const LINES: Line[] = [
-  { text: "We build.", maxOpacity: 1 },
-  { text: "We brand.", maxOpacity: 0.38 },
-  { text: "We mean it.", maxOpacity: 0.26, color: "var(--color-blue-2)" },
+  { text: "We brand.", maxOpacity: 1 },
+  { text: "We build.", maxOpacity: 0.38 },
+  { text: "We back it up.", maxOpacity: 0.26, color: "var(--color-blue-2)" },
 ];
 
 export function AboutHero() {
@@ -28,7 +28,7 @@ export function AboutHero() {
 
   return (
     <section
-      className="relative min-h-screen"
+      className="relative min-h-screen flex flex-col justify-center"
       style={{ background: "var(--color-ink-2)" }}
     >
       {/* Rotating outlined letterform watermark */}
@@ -63,7 +63,7 @@ export function AboutHero() {
         className="shell relative z-[2]"
         style={{ paddingTop: "clamp(100px, 13vh, 160px)", paddingBottom: "100px" }}
       >
-        <p aria-label="We build. We brand. We mean it.">
+        <p aria-label="We brand. We build. We back it up.">
           {LINES.map((line, i) => (
             <span
               key={i}
@@ -72,7 +72,7 @@ export function AboutHero() {
               }}
               className="block font-display font-black tracking-[-0.04em] leading-[0.88] text-paper"
               style={{
-                fontSize: "clamp(86px, 17vw, 252px)",
+                fontSize: "clamp(70px, 14vw, 204px)",
                 opacity: 0,
                 transform: "translateY(60px)",
                 color: line.color,

@@ -15,8 +15,8 @@ export const WORK_PROJECTS: WorkProject[] = [
   {
     slug: "dataline-finance",
     name: "Dataline Finance",
-    category: "FINTECH · DATA",
-    type: "Data Platform",
+    category: "FINANCE · WEB",
+    type: "Website Revamp",
     year: 2025,
     bg: "bg-ink",
     text: "paper",

@@ -15,7 +15,7 @@ const services: Service[] = [
   {
     num: "/01",
     name: <>Marketing &<br />Brand</>,
-    desc: "Brand identity, positioning, campaigns, and performance marketing — designed to be remembered and built to convert when nobody's watching.",
+    desc: "Brand identity, positioning, campaigns, and performance marketing - designed to be remembered and built to convert when nobody's watching.",
     href: "/services/marketing-brand",
     iconBg: "bg-peach",
     iconStroke: "text-ink",
@@ -29,7 +29,7 @@ const services: Service[] = [
   {
     num: "/02",
     name: "Software Development",
-    desc: "End-to-end platforms, web apps, and internal tools built by senior engineers who understand the product — not just the ticket.",
+    desc: "End-to-end platforms, web apps, and internal tools built by senior engineers who understand the problem and can design fit-for-purpose solutions that move the needle.",
     href: "/services/software-development",
     iconBg: "bg-blue-2",
     iconStroke: "text-ink",
@@ -40,7 +40,7 @@ const services: Service[] = [
   {
     num: "/03",
     name: "AI & Machine Learning",
-    desc: "RAG pipelines, prediction models, and intelligent automation. We deploy AI that ships real value in weeks — not conference decks.",
+    desc: "RAG pipelines, prediction models, and intelligent automation. We turn AI opportunities into production-ready systems that create measurable impact.",
     href: "/services/ai-machine-learning",
     iconBg: "bg-blue",
     iconStroke: "text-paper",
@@ -80,7 +80,7 @@ export function Services() {
         className="mb-20 max-w-[14ch] font-display text-[clamp(40px,6.4vw,96px)] font-medium leading-[0.95] tracking-[-0.04em] text-ink-2"
       >
         Engineering, intelligence and{" "}
-        <em className="font-serif font-normal italic text-blue">craft</em> —
+        <em className="font-serif font-normal italic text-blue">craft</em> -
         under one roof.
       </Reveal>
 
