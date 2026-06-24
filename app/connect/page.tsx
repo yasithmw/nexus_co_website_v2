@@ -107,13 +107,10 @@ export default function ConnectPage() {
 
                 <div className="space-y-1.5">
                   <div className="mb-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-                    Australia
+                    Offices
                   </div>
                   <div className="font-display text-[15px] font-semibold text-ink">
-                    Sydney, NSW
-                  </div>
-                  <div className="text-[13.5px] text-muted">
-                    Melbourne · Brisbane · Remote
+                    Australia · New Zealand · UK
                   </div>
                 </div>
               </div>
@@ -132,7 +129,7 @@ export default function ConnectPage() {
                     CreateLyft
                   </a>
                   <span className="font-mono text-[11px] tracking-[0.05em] text-muted">
-                    © 2026{" "}
+                    © 2026 CreateLyft ·{" "}
                     <a href="/privacy" className="underline underline-offset-2 transition-colors hover:text-ink">
                       Privacy
                     </a>
@@ -143,8 +140,6 @@ export default function ConnectPage() {
                   {[
                     { label: "LinkedIn", href: "#" },
                     { label: "Instagram", href: "#" },
-                    { label: "GitHub", href: "#" },
-                    { label: "Dribbble", href: "#" },
                   ].map((link, i) => (
                     <span key={link.label} className="flex items-center">
                       {i > 0 && <span aria-hidden className="px-2 text-blue-2">✦</span>}

@@ -3,8 +3,8 @@ import { StarIcon } from "../icons";
 const tickerItems = [
   "Marketing & Brand",
   "Software Development",
-  "Resource Augmentation",
   "AI & Machine Learning",
+  "Resource Augmentation",
 ];
 
 function TickerGroup({ ariaHidden = false }: { ariaHidden?: boolean }) {
@@ -86,7 +86,7 @@ export function Hero() {
           >
             <b className="font-medium">Four disciplines. One Place.</b> We pair
             production grade engineering with sharp brand thinking, so the
-            product you ship and the story you tell finally pull in the same
+            product you deliver and the story you tell finally pull in the same
             direction.
           </p>
 

@@ -1,13 +1,13 @@
 export const CONTENT = {
   hero: {
     label: "Software Development",
-    headline: "Code that ships. Products that work.",
-    sub: "CreateLyft builds platforms, web apps, and internal tools with senior engineers who understand the product — not just the ticket. No offshore bench, no junior-heavy teams handed a spec and left to guess.",
+    headline: "Code that delivers. Products that work.",
+    sub: "CreateLyft builds platforms, web applications, and internal tools with engineers who think beyond the brief. We combine technical expertise with product thinking, ensuring the people building the solution understand the problem they're solving.",
   },
 
   overview: {
-    headline: "Built to ship.",
-    body: "Most development shops will build exactly what you ask for, even when what you asked for is wrong. We hire people who push back on bad ideas, ask why before they write a line of code, and treat the product outcome as their problem too.",
+    headline: "Built to deliver.",
+    body: "Great engineers do more than write code. They ask questions, challenge assumptions, and take the time to understand the problem before proposing a solution. We hire people who care about the outcome as much as the implementation, because the best solutions come from understanding the why, not just the how.",
     features: [
       {
         title: "Web & Platform Engineering",
@@ -31,8 +31,8 @@ export const CONTENT = {
   approach: [
     {
       step: "01",
-      headline: "Understand the problem before writing a line.",
-      body: "Every project starts with a discovery phase — what the product needs to do, who will use it, where the existing system breaks down, and what success actually looks like. We ask the questions most developers skip because they're eager to start building. You get a written brief, a technical proposal, and a scope everyone has agreed to before we open an editor.",
+      headline: "Think first. Build second.",
+      body: "Every project starts with a discovery phase - what the product needs to do, who will use it, where the existing system breaks down, and what success actually looks like. We ask the questions most developers skip because they're eager to start building. You get a written brief, a technical proposal, and a scope everyone has agreed to before we start the build.",
       imageAlt: "Technical discovery session with whiteboard architecture diagrams and product requirements",
     },
     {

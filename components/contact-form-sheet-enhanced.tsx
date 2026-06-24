@@ -510,7 +510,7 @@ export function ContactFormSheetEnhanced({
 
                     {/* ── Contact details ── */}
                     <div className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
-                      <FieldGroup label="What's your name?" required>
+                      <FieldGroup label="Name" required>
                         <input
                           type="text"
                           value={form.name}
@@ -523,7 +523,7 @@ export function ContactFormSheetEnhanced({
                         />
                       </FieldGroup>
 
-                      <FieldGroup label="Name of your company?" required>
+                      <FieldGroup label="Company" required>
                         <input
                           type="text"
                           value={form.company}

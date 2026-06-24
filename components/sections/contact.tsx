@@ -3,16 +3,16 @@ import { Reveal } from "../reveal";
 
 const cols = [
   {
-    title: "— Sydney HQ",
+    title: "— Melbourne HQ",
     body: (
       <>
         <div className="mb-2 font-display text-[22px] font-medium tracking-[-0.02em]">
-          CreateLyft Sydney
+          CreateLyft Melbourne
         </div>
         <div className="text-[14px] leading-[1.5] opacity-75">
           Level 12, 50 Carrington St
           <br />
-          Sydney NSW 2000
+          Melbourne VIC 3000
           <br />
           Australia
         </div>
@@ -21,15 +21,15 @@ const cols = [
   },
   {
     title: "— Studios",
-    items: ["Sydney", "Melbourne", "Brisbane", "Remote — globally"],
+    items: ["Australia", "New Zealand", "UK"],
   },
   {
     title: "— Capabilities",
     items: [
       { label: "Marketing & Branding", href: "#" },
       { label: "Software Development", href: "#" },
-      { label: "Resource Augmentation", href: "#" },
       { label: "AI & Machine Learning", href: "#" },
+      { label: "Resource Augmentation", href: "#" },
     ],
   },
   {
@@ -37,8 +37,6 @@ const cols = [
     items: [
       { label: "LinkedIn", href: "#" },
       { label: "Instagram", href: "#" },
-      { label: "Dribbble", href: "#" },
-      { label: "GitHub", href: "#" },
     ],
   },
 ];
@@ -113,8 +111,7 @@ export function Contact({ service }: { service?: ServiceKey } = {}) {
         </div>
 
         <div className="mt-20 flex flex-col gap-3 border-t border-white/10 pt-6 font-mono text-[11px] uppercase tracking-[0.1em] text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 CreateLyft · Independent Australian studio</span>
-          <span>ABN 00 000 000 000</span>
+          <span>© 2026 CreateLyft · Australian studio</span>
         </div>
       </div>
     </section>

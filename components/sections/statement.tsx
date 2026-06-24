@@ -3,13 +3,13 @@
 import { useEffect, useRef } from "react";
 
 const lineTexts = [
-  "The product they use.",
   "The brand they trust.",
+  "The product they use.",
   "Built by the same team.",
 ];
 
 function renderLineContent(index: number) {
-  if (index === 1) {
+  if (index === 0) {
     return (
       <>
         The brand they{" "}

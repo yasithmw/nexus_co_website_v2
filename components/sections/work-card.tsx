@@ -16,46 +16,101 @@ const tileArrowBase =
   "inline-flex h-11 w-11 items-center justify-center rounded-full text-base transition-transform duration-[350ms] group-hover:-rotate-45"
 
 // ── Card art: Dataline Finance ────────────────────────────────────────────────
-// Dark bg-ink tile: a financial data table mockup on bg-ink-2 card,
-// with a line chart tracing revenue and a "+21.4%" KPI callout in text-blue-2.
+// Light browser-window mockup on dark bg-ink tile, showing the revamped
+// dataline.com.au — nav, hero headline, service pills, and a CTA.
 function DatalineFinanceArt() {
   return (
     <div
-      className="flex aspect-[16/11] w-full max-w-[320px] flex-col gap-2.5 rounded-[14px] p-4 shadow-[0_18px_50px_-12px_rgba(0,0,0,0.22)] transition-transform duration-[550ms] ease-[cubic-bezier(0.2,0.6,0.2,1)] group-hover:translate-y-[-4px] group-hover:rotate-0"
-      style={{ background: "var(--color-ink-2)", color: "var(--color-paper)", transform: "rotate(-2deg)" }}
+      className="flex aspect-[16/11] w-full max-w-[320px] flex-col overflow-hidden rounded-[14px] shadow-[0_18px_50px_-12px_rgba(0,0,0,0.35)] transition-transform duration-[550ms] ease-[cubic-bezier(0.2,0.6,0.2,1)] group-hover:translate-y-[-4px] group-hover:rotate-0"
+      style={{ background: "var(--color-paper)", transform: "rotate(-2deg)" }}
     >
-      {/* Header row */}
-      <div className="flex items-center justify-between font-mono text-[9px] tracking-[0.1em]" style={{ color: "var(--color-blue-2)" }}>
-        <span>REVENUE · MTD</span>
-        <span className="font-semibold" style={{ color: "#7CE4A6" }}>+21.4%</span>
+      {/* Browser chrome */}
+      <div
+        className="flex flex-shrink-0 items-center gap-1.5 border-b px-3 py-2"
+        style={{ borderColor: "rgba(39,24,126,0.08)", background: "var(--color-paper-2)" }}
+      >
+        <span className="h-2 w-2 rounded-full" style={{ background: "rgba(255,145,164,0.55)" }} />
+        <span className="h-2 w-2 rounded-full" style={{ background: "rgba(255,200,100,0.4)" }} />
+        <span className="h-2 w-2 rounded-full" style={{ background: "rgba(124,228,166,0.4)" }} />
+        <div
+          className="ml-2 flex-1 rounded px-2 py-0.5 font-mono text-[7.5px]"
+          style={{ background: "rgba(39,24,126,0.05)", color: "rgba(39,24,126,0.35)" }}
+        >
+          dataline.com.au
+        </div>
       </div>
 
-      {/* Line chart */}
-      <svg viewBox="0 0 200 56" preserveAspectRatio="none" className="w-full flex-1">
-        <defs>
-          <linearGradient id="dl-finance-grad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#758BFD" stopOpacity="0.45" />
-            <stop offset="100%" stopColor="#758BFD" stopOpacity="0" />
-          </linearGradient>
-        </defs>
-        <path d="M0 48 Q 30 42 55 36 T 100 26 T 148 14 T 200 6 L 200 56 L 0 56 Z" fill="url(#dl-finance-grad)" />
-        <path d="M0 48 Q 30 42 55 36 T 100 26 T 148 14 T 200 6" stroke="#AEB8FE" strokeWidth="1.6" fill="none" />
-        <circle cx="200" cy="6" r="2.5" fill="#AEB8FE" />
-      </svg>
+      {/* Nav bar */}
+      <div
+        className="flex flex-shrink-0 items-center justify-between border-b px-4 py-2"
+        style={{ borderColor: "rgba(39,24,126,0.06)" }}
+      >
+        <div
+          className="font-display text-[9px] font-bold tracking-[-0.02em]"
+          style={{ color: "var(--color-ink)" }}
+        >
+          Dataline
+        </div>
+        <div className="flex gap-3">
+          {["Solutions", "About", "Contact"].map((item) => (
+            <span key={item} className="font-mono text-[6.5px]" style={{ color: "rgba(39,24,126,0.38)" }}>
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
 
-      {/* Table rows */}
-      <div className="flex flex-col gap-1">
-        {[
-          { label: "Settlements", val: "$4.2M", delta: "+8%" },
-          { label: "Transactions", val: "128k", delta: "+12%" },
-          { label: "Avg ticket", val: "$32.8", delta: "+3%" },
-        ].map((row) => (
-          <div key={row.label} className="flex items-center justify-between font-mono text-[8px] tracking-[0.06em]">
-            <span style={{ color: "rgba(241,242,246,0.45)" }}>{row.label}</span>
-            <span style={{ color: "var(--color-blue-2)" }}>{row.val}</span>
-            <span style={{ color: "#7CE4A6" }}>{row.delta}</span>
+      {/* Hero + content */}
+      <div className="flex flex-1 flex-col justify-between px-4 pb-3.5 pt-3">
+        {/* Headline */}
+        <div>
+          <div
+            className="mb-1 font-mono text-[6px] uppercase tracking-[0.14em]"
+            style={{ color: "rgba(39,24,126,0.38)" }}
+          >
+            Finance Automation · Est. 1987
           </div>
-        ))}
+          <div
+            className="font-display font-bold leading-[1.15] tracking-[-0.03em]"
+            style={{ fontSize: "12px", color: "var(--color-ink)" }}
+          >
+            35 years of expertise.<br />Now one click away.
+          </div>
+        </div>
+
+        {/* Body text placeholder lines */}
+        <div className="flex flex-col gap-1">
+          <div className="h-[4px] w-[88%] rounded-full" style={{ background: "rgba(39,24,126,0.07)" }} />
+          <div className="h-[4px] w-[72%] rounded-full" style={{ background: "rgba(39,24,126,0.05)" }} />
+        </div>
+
+        {/* CTA + social proof */}
+        <div className="flex items-center gap-2.5">
+          <div
+            className="rounded-full px-2.5 py-1 font-mono text-[6.5px] uppercase tracking-[0.1em]"
+            style={{ background: "var(--color-ink)", color: "var(--color-paper)" }}
+          >
+            Get Started
+          </div>
+          <span className="font-mono text-[6.5px]" style={{ color: "rgba(39,24,126,0.38)" }}>
+            100+ global clients
+          </span>
+        </div>
+
+        {/* Service pills */}
+        <div className="flex gap-1.5">
+          {["AP Automation", "Procurement", "AI Finance"].map((label) => (
+            <div
+              key={label}
+              className="rounded-md px-2 py-1 text-center"
+              style={{ background: "rgba(39,24,126,0.04)", border: "1px solid rgba(39,24,126,0.08)" }}
+            >
+              <span className="font-mono text-[5.5px] uppercase tracking-[0.08em]" style={{ color: "rgba(39,24,126,0.5)" }}>
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

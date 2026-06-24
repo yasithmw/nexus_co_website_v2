@@ -1,13 +1,13 @@
 export const CONTENT = {
   hero: {
     label: "Resource Augmentation",
-    headline: "Real engineers. No hiring circus.",
-    sub: "We place vetted senior engineers inside your team — accountable for outcomes, not just hours. No warm bodies, no bait-and-switch juniors, no three-month ramp before anyone ships anything.",
+    headline: "Real expertise. No hiring circus.",
+    sub: "We embed senior talent directly into your team - people who can contribute from day one, take ownership of their work, and create value quickly. No surprises, no junior substitutions, and no long lead times before momentum starts to build.",
   },
 
   overview: {
     headline: "Ready when you are.",
-    body: "Most hiring delays don't kill projects — but they slow them down enough that the window closes. We've seen it too many times: six weeks of recruiting, a \"senior\" engineer who needs handholding, and a critical deadline that quietly slips. There's a faster way.",
+    body: "Most hiring delays don't kill projects - but they slow them down enough that the window closes. We've seen it too many times: six weeks of recruiting, \"senior\" people who needs handholding, and a critical deadline that quietly slips. There's a faster way.",
     features: [
       {
         title: "Senior Engineers On-Demand",

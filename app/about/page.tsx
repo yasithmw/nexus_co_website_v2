@@ -9,16 +9,15 @@ import { TestimonialsCarousel } from "@/components/sections/testimonials-carouse
 export const metadata: Metadata = {
   title: "About CreateLyft — Australian B2B Studio",
   description:
-    "CreateLyft is an independent Australian studio combining software engineering, data, AI, and brand craft. Sydney, Melbourne, Brisbane, and remote.",
+    "CreateLyft is an Australian studio combining software engineering, data, AI, and brand craft. Sydney, Melbourne, Brisbane, and remote.",
 };
 
 // ─── Team data ───────────────────────────────────────────────────────────────
 const TEAM = [
-  { id: 1, name: "Lachlan Morrish", role: "Co-founder & Engineering Lead", initials: "LM" },
-  { id: 2, name: "Sophie Drummond", role: "Co-founder & Creative Director", initials: "SD" },
-  { id: 3, name: "Rohan Vaz", role: "Principal AI Engineer", initials: "RV" },
-  { id: 4, name: "Caitlin Farquhar", role: "Head of Data Architecture", initials: "CF" },
-  { id: 5, name: "James Okello", role: "Senior Brand Strategist", initials: "JO" },
+  { id: 1, name: "Kate Behar", role: "Co-Founder and CMO", initials: "KB" },
+  { id: 2, name: "Shayen Yatagama", role: "Co-Founder and CTO", initials: "SH" },
+  { id: 3, name: "Thulith Edirisinghe", role: "", initials: "TH" },
+  { id: 4, name: "Luke", role: "Creative Director", initials: "LK" },
 ];
 
 // ─── Values data ─────────────────────────────────────────────────────────────
@@ -29,7 +28,7 @@ const VALUES = [
   },
   {
     label: "Craft",
-    desc: "We care about how things are made. Speed matters, but not more than quality. We don't ship things we'd be embarrassed to put our name on.",
+    desc: "We care about how things are made. Speed matters, but not more than quality. We don't deliver things we'd be embarrassed to put our name on.",
   },
   {
     label: "Ownership",
@@ -37,7 +36,7 @@ const VALUES = [
   },
   {
     label: "Rigour",
-    desc: "Good intentions aren't enough. We test assumptions, question constraints, and do the thinking before we open a text editor or a design file.",
+    desc: "Good intentions aren't enough. We test assumptions, question constraints, and do the thinking before we schedule the project kick-off!",
   },
 ];
 
@@ -62,35 +61,36 @@ export default function AboutPage() {
                   as="p"
                   className="text-[17px] leading-[1.6] text-ink/70 max-w-[52ch]"
                 >
-                  CreateLyft started in Sydney in 2025 with a simple frustration:
-                  companies kept hiring two separate agencies — one for the
-                  product, one for the brand — and neither talked to the other.
-                  The result was software that worked but looked like it
-                  didn&apos;t, and campaigns that looked great but promised
-                  things the product couldn&apos;t deliver. We set out to fix
-                  that.
+                  CreateLyft started in Australia in 2025 with a simple
+                  observation: businesses were hiring one agency for their brand
+                  and another for their product, and the two rarely worked in
+                  sync. The result was software that functioned well but lacked
+                  a strong identity, and marketing campaigns that looked great
+                  but set expectations the product couldn&apos;t meet. We
+                  started CreateLyft to bring brand and product together, so
+                  businesses can build with clarity, consistency, and purpose.
                 </Reveal>
                 <Reveal
                   as="p"
                   className="text-[17px] leading-[1.6] text-ink/70 max-w-[52ch]"
                 >
-                  We are a new studio, but not new to the work. Between us, we
-                  have spent years inside product companies, agencies, and
-                  engineering consultancies — shipping fintech platforms, B2B
-                  SaaS tools, AI-powered data pipelines, and brand identity
-                  systems across Australia and internationally. We started Nexus
-                  Co because we wanted to do all of it together, in one place,
-                  without the handoff problems that come from keeping engineering
-                  and creative apart.
+                  CreateLyft launched in 2025, but our experience runs deep.
+                  Our team has spent years inside product companies, agencies,
+                  and engineering consultancies, delivering fintech platforms,
+                  B2B SaaS products, AI-powered systems, and brand identity
+                  programs across Australia and internationally. We founded our
+                  business to unite strategy, design, and development under one
+                  roof - removing the friction, misalignment, and handoffs that
+                  come from treating brand and product as separate disciplines.
                 </Reveal>
                 <Reveal
                   as="p"
                   className="text-[17px] leading-[1.6] text-ink/70 max-w-[52ch]"
                 >
-                  We are independent. No holding company. No offshore bench.
-                  Just a tight group of senior people who care about the same
-                  things: getting the brief right, doing the work properly, and
-                  shipping something you&apos;re genuinely proud of.
+                  No corporate layers. No
+                  bloated teams. Just experienced people who take ownership of
+                  the work, sweat the details, and care deeply about the quality
+                  of what we deliver.
                 </Reveal>
               </div>
 
@@ -125,10 +125,7 @@ export default function AboutPage() {
                       Studios
                     </div>
                     <div className="font-display text-[17px] font-semibold tracking-[-0.02em] text-ink">
-                      Sydney · Melbourne · Brisbane
-                    </div>
-                    <div className="mt-1 font-mono text-[12px] tracking-[0.04em] text-muted">
-                      + Remote — globally
+                      Australia · New Zealand · UK
                     </div>
                   </div>
 
@@ -142,7 +139,7 @@ export default function AboutPage() {
                       4
                     </div>
                     <div className="mt-1 font-mono text-[12px] tracking-[0.04em] text-muted">
-                      Engineering · Resource Augmentation · AI · Brand
+                      Marketing & Branding · Software Development · AI & Machine Learning · Resource Augmentation
                     </div>
                   </div>
                 </div>
@@ -182,7 +179,7 @@ export default function AboutPage() {
                   },
                   {
                     n: "03",
-                    text: "Senior people, end to end — not just at the pitch, but through delivery and whatever comes after.",
+                    text: "Senior people, end to end - not just at the pitch, but through delivery and whatever comes after.",
                   },
                 ].map((item) => (
                   <Reveal
@@ -225,9 +222,9 @@ export default function AboutPage() {
                   className="font-display font-medium tracking-[-0.02em] leading-[1.25] text-ink"
                   style={{ fontSize: "clamp(20px, 2.5vw, 32px)" }}
                 >
-                  We help Australian and global businesses build products that
-                  work and brands that land — by bringing engineering and
-                  creative together where most studios keep them apart.
+                  We help businesses build brands that land and products that
+                  work - by bringing engineering and creative together where
+                  most studios keep them apart.
                 </p>
               </div>
               <div>
@@ -238,8 +235,8 @@ export default function AboutPage() {
                   className="font-display font-medium tracking-[-0.02em] leading-[1.25] text-ink"
                   style={{ fontSize: "clamp(20px, 2.5vw, 32px)" }}
                 >
-                  A future where the gap between what a business does and how it
-                  presents itself doesn&apos;t exist.
+                  A future where brands and products are built as one - creating
+                  clearer, more meaningful experiences for customers.
                 </p>
               </div>
             </Reveal>
@@ -266,17 +263,17 @@ export default function AboutPage() {
         {/* ── Section 5: Team Grid ─────────────────────────────────────────── */}
         <section className="pt-[60px] pb-[60px]">
           <div className="shell">
-            <SectionHead label="The Team" right="5 people" />
+            <SectionHead label="The Team" right="4 people" />
 
-            <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 lg:grid-cols-5">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4">
               {TEAM.map((member) => (
-                <Reveal key={member.id} className="flex flex-col">
+                <Reveal key={member.id} className="flex flex-col items-center">
                   <div className="aspect-square w-full overflow-hidden rounded-full bg-paper-2 flex items-center justify-center transition-transform hover:-translate-y-1">
                     <span className="font-display text-[clamp(18px,2.5vw,28px)] font-semibold tracking-[-0.02em] text-muted select-none">
                       {member.initials}
                     </span>
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-4 text-center">
                     <div className="font-display text-[16px] font-semibold tracking-[-0.02em] text-ink leading-tight">
                       {member.name}
                     </div>
