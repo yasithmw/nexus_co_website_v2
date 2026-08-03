@@ -1,4 +1,6 @@
+import Image from "next/image"
 import type { WorkProject } from "@/data/work-projects"
+import alignifyMark from "@/public/work/alignify-mark.png"
 
 const tileBase =
   "group relative isolate flex aspect-[4/3.4] cursor-pointer items-center justify-center overflow-hidden rounded-lg transition-[transform,box-shadow] duration-[550ms] ease-[cubic-bezier(0.2,0.6,0.2,1)] hover:-translate-y-2 hover:shadow-[0_30px_60px_-20px_rgba(39,24,126,0.25)]"
@@ -201,10 +203,19 @@ function AlignifyArt() {
       className="flex w-full max-w-[280px] flex-col gap-3 rounded-[14px] p-5 shadow-[0_18px_50px_-12px_rgba(39,24,126,0.18)] transition-transform duration-[550ms] ease-[cubic-bezier(0.2,0.6,0.2,1)] group-hover:translate-y-[-4px] group-hover:rotate-0"
       style={{ background: "var(--color-paper)", transform: "rotate(-1.5deg)" }}
     >
-      {/* Card header */}
+      {/* Card header — Alignify mark brands the mock as their product */}
       <div className="flex items-center justify-between">
-        <div className="font-display text-[11px] font-semibold" style={{ color: "var(--color-ink)" }}>
-          OKR Tracker
+        <div className="flex items-center gap-1.5">
+          <Image
+            src={alignifyMark}
+            alt=""
+            width={16}
+            height={16}
+            className="h-4 w-4 flex-shrink-0"
+          />
+          <div className="font-display text-[11px] font-semibold" style={{ color: "var(--color-ink)" }}>
+            OKR Tracker
+          </div>
         </div>
         <div className="font-mono text-[8px] tracking-[0.1em]" style={{ color: "var(--color-muted)" }}>
           Q3 · 2025
