@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Nav } from "@/components/nav";
 import { AboutHero } from "@/components/sections/about-hero";
 import { Contact } from "@/components/sections/contact";
 import { Reveal } from "@/components/reveal";
 import { SectionHead } from "@/components/section-head";
 import { TestimonialsCarousel } from "@/components/sections/testimonials-carousel";
+import katePhoto from "@/public/team/kate.jpg";
+import shayenPhoto from "@/public/team/shayen.jpg";
+import thulithPhoto from "@/public/team/thulith.jpg";
+import lukePhoto from "@/public/team/luke.jpg";
 
 export const metadata: Metadata = {
   title: "About CreateLyft — Australian B2B Studio",
@@ -14,10 +19,15 @@ export const metadata: Metadata = {
 
 // ─── Team data ───────────────────────────────────────────────────────────────
 const TEAM = [
-  { id: 1, name: "Kate Behar", role: "Co-Founder and CMO", initials: "KB" },
-  { id: 2, name: "Shayen Yatagama", role: "Co-Founder and CTO", initials: "SH" },
-  { id: 3, name: "Thulith Edirisinghe", role: "", initials: "TH" },
-  { id: 4, name: "Luke", role: "Creative Director", initials: "LK" },
+  { id: 1, name: "Kate Behar", role: "Co-Founder and CMO", photo: katePhoto },
+  {
+    id: 2,
+    name: "Shayen Yatagama",
+    role: "Co-Founder and CTO",
+    photo: shayenPhoto,
+  },
+  { id: 3, name: "Thulith Edirisinghe", role: "", photo: thulithPhoto },
+  { id: 4, name: "Luke", role: "Creative Director", photo: lukePhoto },
 ];
 
 // ─── Values data ─────────────────────────────────────────────────────────────
@@ -268,10 +278,15 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4">
               {TEAM.map((member) => (
                 <Reveal key={member.id} className="flex flex-col items-center">
-                  <div className="aspect-square w-full overflow-hidden rounded-full bg-paper-2 flex items-center justify-center transition-transform hover:-translate-y-1">
-                    <span className="font-display text-[clamp(18px,2.5vw,28px)] font-semibold tracking-[-0.02em] text-muted select-none">
-                      {member.initials}
-                    </span>
+                  <div className="relative aspect-square w-full overflow-hidden rounded-full bg-paper-2 transition-transform hover:-translate-y-1">
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      sizes="(min-width: 768px) 22vw, 45vw"
+                      placeholder="blur"
+                      className="object-cover"
+                    />
                   </div>
                   <div className="mt-4 text-center">
                     <div className="font-display text-[16px] font-semibold tracking-[-0.02em] text-ink leading-tight">
