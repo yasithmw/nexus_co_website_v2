@@ -1,33 +1,46 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Nav } from "@/components/nav"
 import { SectionHead } from "@/components/section-head"
-import Image from "next/image"
 import { Reveal } from "@/components/reveal"
 import { WorkCard } from "@/components/sections/work-card"
 import { WORK_PROJECTS } from "@/data/work-projects"
-import shotHero from "@/public/work/dataline-finance/hero.webp"
-import shotServices from "@/public/work/dataline-finance/services.webp"
-import shotStories from "@/public/work/dataline-finance/stories.webp"
+import shotHero from "@/public/work/alignify/hero.webp"
+import shotModel from "@/public/work/alignify/model.webp"
+import shotPricing from "@/public/work/alignify/pricing.webp"
 
-const PROJECT = WORK_PROJECTS.find((p) => p.slug === "dataline-finance")!
+const PROJECT = WORK_PROJECTS.find((p) => p.slug === "alignify")!
 
 export const metadata: Metadata = {
-  title: "Dataline Finance Website Revamp — CreateLyft",
+  title: "Alignify — Sales Enablement SaaS | CreateLyft",
   description:
-    "CreateLyft rebuilt the Dataline Finance website from brief to launch — design, copy, SEO, and development. Thirty-five years of expertise, finally reflected online.",
+    "CreateLyft built Alignify, a sales enablement platform that profiles sellers and buyers, scores prospect fit, and turns the result into a buyer playbook.",
 }
 
-// ── Page ──────────────────────────────────────────────────────────────────────
-
 const DISCIPLINES = [
+  "Product Strategy",
   "UX & Visual Design",
   "Copywriting",
-  "Content Strategy",
-  "On-Page SEO",
   "Web Development",
+  "On-Page SEO",
 ]
 
-export default function DatalineFinancePage() {
+const FEATURES = [
+  {
+    label: "Personality Profiling",
+    desc: "A behavioural assessment of both sides of the deal — communication style, decision-making, pace, and risk tolerance.",
+  },
+  {
+    label: "Alignment Score",
+    desc: "A single 0–100 read on prospect fit, built from personality, buying behaviour, and seller-buyer compatibility.",
+  },
+  {
+    label: "Buyer Playbook",
+    desc: "The score turned into something actionable — tone to strike, pricing sensitivity, and closing tactics for that specific buyer.",
+  },
+]
+
+export default function AlignifyPage() {
   return (
     <>
       <Nav />
@@ -36,19 +49,19 @@ export default function DatalineFinancePage() {
         {/* ── Hero ──────────────────────────────────────────────────────────── */}
         <section className="pt-[140px] pb-[60px]">
           <div className="shell">
-            <SectionHead label="Dataline Finance" right="2025" />
+            <SectionHead label="Alignify" right="2025" />
 
             <Reveal
               as="h1"
               className="font-display font-bold tracking-[-0.04em] text-ink-2"
               style={{ fontSize: "clamp(48px, 7vw, 100px)", lineHeight: 1.0 }}
             >
-              A website the business actually deserved.
+              Know your prospect. Sell more.
             </Reveal>
 
             <Reveal as="div" className="mt-5">
               <span className="inline-flex items-center rounded-full bg-paper-2 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-                Website Revamp &middot; 2025
+                B2B SaaS &middot; 2025
               </span>
             </Reveal>
           </div>
@@ -61,43 +74,53 @@ export default function DatalineFinancePage() {
 
               {/* Left column — copy */}
               <div>
-                {/* Intro */}
                 <Reveal as="p" className="text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  Dataline Finance has been automating accounts payable and finance operations for
-                  over 35 years. They serve more than 100 global clients, and they&apos;ve built a
-                  reputation for precision and reliability in a space where both actually matter.
-                  The website didn&apos;t come close to reflecting any of that.
+                  Alignify is a sales enablement platform built on a simple premise: most deals
+                  aren&apos;t lost on price or product, they&apos;re lost because the seller and the
+                  buyer are speaking past each other. The product profiles both sides, scores how
+                  well they fit, and hands the rep a playbook for that specific conversation.
                 </Reveal>
 
-                {/* The Challenge */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  When businesses are evaluating a finance automation partner, they&apos;re making a
-                  decision that touches their entire AP operation — invoices, approvals, procurement,
-                  reconciliations. The bar for trust is high. A dated, thin website doesn&apos;t just
-                  underperform in search — it quietly undermines confidence before a conversation has
-                  even started. For a company with Dataline&apos;s depth of experience and client base,
-                  that gap between the business and the website it was presenting was costing them.
+                  The category is crowded and sceptical. Sales leaders have been sold dashboards
+                  before, and &ldquo;personality&rdquo; tooling carries baggage — it can read as
+                  soft, or worse, as pseudoscience. So the brief wasn&apos;t just to ship a
+                  marketing site. It was to make an unfamiliar idea land quickly and credibly, for
+                  a buyer who decides in about thirty seconds whether something is serious.
                 </Reveal>
 
-                {/* The Approach */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  CreateLyft handled the full build — design, copy, SEO, and front-end development.
-                  We started with what Dataline actually does well: intelligent automation, 35 years
-                  of operational expertise, high accuracy standards, and a genuine breadth of
-                  solutions across AP, procurement, and finance transformation. The design was
-                  built to carry that weight — structured, considered, and credible. Copy was
-                  written to be clear about the offer without drowning it in jargon. SEO was built
-                  in from day one. Then the dev work: a clean, fast, responsive build delivered end
-                  to end.
+                  CreateLyft worked from the mechanism outwards. Rather than lead with adjectives,
+                  the site leads with the three things the product actually produces — a profile,
+                  an alignment score, and a playbook — so the value is legible before a visitor
+                  reaches a pricing table. The design keeps the assessment language precise and
+                  measured, and the copy stays concrete about what a rep gets and when they get it.
                 </Reveal>
 
-                {/* The Outcome */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  Dataline Finance now has a website that holds up alongside the scale and quality
-                  of the business behind it. It communicates clearly to the right buyers, performs
-                  in search, and gives their team something they can send to a prospective client
-                  before a meeting with confidence. Thirty-five years of expertise — finally showing
-                  up online the way it should.
+                  Alignify now has a front door that explains a genuinely novel product without
+                  overclaiming, positions it against the cost of buyer misalignment, and moves the
+                  right visitor to a trial. Intelligent alignment for sales teams — presented like
+                  the serious tool it is.
+                </Reveal>
+
+                {/* Product pillars */}
+                <Reveal as="div" className="mt-10 border-t border-line pt-8">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted mb-5">
+                    What the product does
+                  </p>
+                  <div className="flex flex-col gap-5">
+                    {FEATURES.map((f) => (
+                      <div key={f.label}>
+                        <div className="font-display text-[15px] font-semibold tracking-[-0.02em] text-ink">
+                          {f.label}
+                        </div>
+                        <p className="mt-1 text-[15px] leading-[1.55] text-ink/70 max-w-[48ch]">
+                          {f.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </Reveal>
 
                 {/* What we did */}
@@ -131,12 +154,12 @@ export default function DatalineFinancePage() {
                 </Reveal>
               </div>
 
-              {/* Right column — screenshots of the live site */}
+              {/* Right column — screenshots of the live product */}
               <div>
                 <Reveal as="div">
                   <Image
                     src={shotHero}
-                    alt="The Dataline Finance homepage: “Trusted in finance automation for over 30 years,” with volume and accuracy figures."
+                    alt="The Alignify homepage: “Know your prospect, know your customer, sell more,” with win-ratio and sales-confidence figures."
                     sizes="(min-width: 1024px) 55vw, 100vw"
                     className="w-full rounded-[var(--radius-lg)] border border-line"
                   />
@@ -145,16 +168,16 @@ export default function DatalineFinancePage() {
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <Reveal as="div">
                     <Image
-                      src={shotServices}
-                      alt="Three decades of experience — AP automation, procurement, and finance transformation, with client logos."
+                      src={shotModel}
+                      alt="The Alignify model — alignment score, personality profiling, and buyer playbook explained."
                       sizes="(min-width: 1024px) 27vw, 50vw"
                       className="w-full rounded-[var(--radius-lg)] border border-line"
                     />
                   </Reveal>
                   <Reveal as="div">
                     <Image
-                      src={shotStories}
-                      alt="Customer success stories from Computershare and sgfleet."
+                      src={shotPricing}
+                      alt="Alignify pricing: the personality profile and buyer playbook on a $99 monthly subscription."
                       sizes="(min-width: 1024px) 27vw, 50vw"
                       className="w-full rounded-[var(--radius-lg)] border border-line"
                     />
@@ -174,7 +197,7 @@ export default function DatalineFinancePage() {
               <a href="/work" className="transition-colors duration-150 hover:text-ink">View all →</a>
             </div>
             <div className="grid gap-7 md:grid-cols-3">
-              {WORK_PROJECTS.filter((p) => p.slug !== "dataline-finance").map((p) => (
+              {WORK_PROJECTS.filter((p) => p.slug !== "alignify").map((p) => (
                 <WorkCard key={p.slug} project={p} />
               ))}
             </div>

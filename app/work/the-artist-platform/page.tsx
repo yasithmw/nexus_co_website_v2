@@ -1,33 +1,46 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Nav } from "@/components/nav"
 import { SectionHead } from "@/components/section-head"
-import Image from "next/image"
 import { Reveal } from "@/components/reveal"
 import { WorkCard } from "@/components/sections/work-card"
 import { WORK_PROJECTS } from "@/data/work-projects"
-import shotHero from "@/public/work/dataline-finance/hero.webp"
-import shotServices from "@/public/work/dataline-finance/services.webp"
-import shotStories from "@/public/work/dataline-finance/stories.webp"
+import shotHero from "@/public/work/the-artist-platform/hero.webp"
+import shotEcosystem from "@/public/work/the-artist-platform/ecosystem.webp"
+import shotAudiences from "@/public/work/the-artist-platform/audiences.webp"
 
-const PROJECT = WORK_PROJECTS.find((p) => p.slug === "dataline-finance")!
+const PROJECT = WORK_PROJECTS.find((p) => p.slug === "the-artist-platform")!
 
 export const metadata: Metadata = {
-  title: "Dataline Finance Website Revamp — CreateLyft",
+  title: "The Artist Platform — Music Industry Marketplace | CreateLyft",
   description:
-    "CreateLyft rebuilt the Dataline Finance website from brief to launch — design, copy, SEO, and development. Thirty-five years of expertise, finally reflected online.",
+    "CreateLyft built The Artist Platform, a marketplace connecting musicians with venues, collaborators, and services. Launching in Sydney and Brisbane.",
 }
 
-// ── Page ──────────────────────────────────────────────────────────────────────
-
 const DISCIPLINES = [
+  "Product Strategy",
   "UX & Visual Design",
+  "Brand & Identity",
   "Copywriting",
-  "Content Strategy",
-  "On-Page SEO",
   "Web Development",
 ]
 
-export default function DatalineFinancePage() {
+const AUDIENCES = [
+  {
+    label: "Artists",
+    desc: "Solo performers and bands building an industry-ready profile and EPK, then finding bookings and collaborators without relying on cold outreach.",
+  },
+  {
+    label: "Venues",
+    desc: "Clubs and performance spaces discovering vetted talent through structured filtering, with booking handled in the same place.",
+  },
+  {
+    label: "Service providers",
+    desc: "Photographers, producers, studios, and marketers listed in a curated marketplace the rest of the ecosystem actually trusts.",
+  },
+]
+
+export default function TheArtistPlatformPage() {
   return (
     <>
       <Nav />
@@ -36,19 +49,19 @@ export default function DatalineFinancePage() {
         {/* ── Hero ──────────────────────────────────────────────────────────── */}
         <section className="pt-[140px] pb-[60px]">
           <div className="shell">
-            <SectionHead label="Dataline Finance" right="2025" />
+            <SectionHead label="The Artist Platform" right="2026" />
 
             <Reveal
               as="h1"
               className="font-display font-bold tracking-[-0.04em] text-ink-2"
               style={{ fontSize: "clamp(48px, 7vw, 100px)", lineHeight: 1.0 }}
             >
-              A website the business actually deserved.
+              Where musicians &amp; opportunity meet.
             </Reveal>
 
             <Reveal as="div" className="mt-5">
               <span className="inline-flex items-center rounded-full bg-paper-2 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-                Website Revamp &middot; 2025
+                Creative Platform &middot; 2026
               </span>
             </Reveal>
           </div>
@@ -61,43 +74,54 @@ export default function DatalineFinancePage() {
 
               {/* Left column — copy */}
               <div>
-                {/* Intro */}
                 <Reveal as="p" className="text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  Dataline Finance has been automating accounts payable and finance operations for
-                  over 35 years. They serve more than 100 global clients, and they&apos;ve built a
-                  reputation for precision and reliability in a space where both actually matter.
-                  The website didn&apos;t come close to reflecting any of that.
+                  The Artist Platform — TAP — is a marketplace for working musicians. Artists,
+                  venues, and the people who serve them all live in one professional ecosystem,
+                  rather than scattered across social profiles, group chats, and inboxes.
                 </Reveal>
 
-                {/* The Challenge */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  When businesses are evaluating a finance automation partner, they&apos;re making a
-                  decision that touches their entire AP operation — invoices, approvals, procurement,
-                  reconciliations. The bar for trust is high. A dated, thin website doesn&apos;t just
-                  underperform in search — it quietly undermines confidence before a conversation has
-                  even started. For a company with Dataline&apos;s depth of experience and client base,
-                  that gap between the business and the website it was presenting was costing them.
+                  The platform calls the problem &ldquo;The Disconnect,&rdquo; and it&apos;s a fair
+                  name for it. A musician chasing work is running a business across half a dozen
+                  tools that were never designed to talk to each other, while venues trying to book
+                  reliable talent have no structured way to find it. Both sides are busy; neither
+                  can see the other clearly. That is a marketplace problem, and marketplaces are
+                  hard — they have to feel populated and credible on day one, to both audiences at
+                  once, or neither shows up.
                 </Reveal>
 
-                {/* The Approach */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  CreateLyft handled the full build — design, copy, SEO, and front-end development.
-                  We started with what Dataline actually does well: intelligent automation, 35 years
-                  of operational expertise, high accuracy standards, and a genuine breadth of
-                  solutions across AP, procurement, and finance transformation. The design was
-                  built to carry that weight — structured, considered, and credible. Copy was
-                  written to be clear about the offer without drowning it in jargon. SEO was built
-                  in from day one. Then the dev work: a clean, fast, responsive build delivered end
-                  to end.
+                  CreateLyft built for that cold-start problem directly. The product is structured
+                  around industry-ready profiles and EPKs, discovery with real filtering, and
+                  booking and collaboration tools that sit alongside a curated marketplace of
+                  services. The site speaks to artists and venues in their own terms without
+                  fracturing into two products, and it makes the value of a profile obvious before
+                  anyone is asked to build one.
                 </Reveal>
 
-                {/* The Outcome */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  Dataline Finance now has a website that holds up alongside the scale and quality
-                  of the business behind it. It communicates clearly to the right buyers, performs
-                  in search, and gives their team something they can send to a prospective client
-                  before a meeting with confidence. Thirty-five years of expertise — finally showing
-                  up online the way it should.
+                  TAP launches in Sydney and Brisbane with pre-registration already open — a
+                  deliberate run-up designed to bring both sides of the marketplace through the
+                  door together. Your professional music career, connected.
+                </Reveal>
+
+                {/* Audiences */}
+                <Reveal as="div" className="mt-10 border-t border-line pt-8">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted mb-5">
+                    Who it serves
+                  </p>
+                  <div className="flex flex-col gap-5">
+                    {AUDIENCES.map((a) => (
+                      <div key={a.label}>
+                        <div className="font-display text-[15px] font-semibold tracking-[-0.02em] text-ink">
+                          {a.label}
+                        </div>
+                        <p className="mt-1 text-[15px] leading-[1.55] text-ink/70 max-w-[48ch]">
+                          {a.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </Reveal>
 
                 {/* What we did */}
@@ -136,7 +160,7 @@ export default function DatalineFinancePage() {
                 <Reveal as="div">
                   <Image
                     src={shotHero}
-                    alt="The Dataline Finance homepage: “Trusted in finance automation for over 30 years,” with volume and accuracy figures."
+                    alt="The Artist Platform homepage: “Where musicians & opportunity meet,” with an example artist profile and booking."
                     sizes="(min-width: 1024px) 55vw, 100vw"
                     className="w-full rounded-[var(--radius-lg)] border border-line"
                   />
@@ -145,16 +169,16 @@ export default function DatalineFinancePage() {
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <Reveal as="div">
                     <Image
-                      src={shotServices}
-                      alt="Three decades of experience — AP automation, procurement, and finance transformation, with client logos."
+                      src={shotEcosystem}
+                      alt="The four steps of the TAP ecosystem: build a profile, collaborate, discover venues, and access trusted services."
                       sizes="(min-width: 1024px) 27vw, 50vw"
                       className="w-full rounded-[var(--radius-lg)] border border-line"
                     />
                   </Reveal>
                   <Reveal as="div">
                     <Image
-                      src={shotStories}
-                      alt="Customer success stories from Computershare and sgfleet."
+                      src={shotAudiences}
+                      alt="TAP's two audiences side by side — more opportunities to play for artists, easier booking for venues."
                       sizes="(min-width: 1024px) 27vw, 50vw"
                       className="w-full rounded-[var(--radius-lg)] border border-line"
                     />
@@ -174,7 +198,7 @@ export default function DatalineFinancePage() {
               <a href="/work" className="transition-colors duration-150 hover:text-ink">View all →</a>
             </div>
             <div className="grid gap-7 md:grid-cols-3">
-              {WORK_PROJECTS.filter((p) => p.slug !== "dataline-finance").map((p) => (
+              {WORK_PROJECTS.filter((p) => p.slug !== "the-artist-platform").map((p) => (
                 <WorkCard key={p.slug} project={p} />
               ))}
             </div>

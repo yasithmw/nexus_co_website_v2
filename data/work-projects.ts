@@ -9,6 +9,8 @@ export type WorkProject = {
   arrowBg: string
   arrowText: string
   status?: string
+  /** Live site, linked from the case study's "View demo" CTA. */
+  liveUrl: string
 }
 
 export const WORK_PROJECTS: WorkProject[] = [
@@ -22,6 +24,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     text: "paper",
     arrowBg: "bg-blue-2",
     arrowText: "text-ink",
+    liveUrl: "https://dataline.com.au",
   },
   {
     slug: "the-artist-platform",
@@ -33,6 +36,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     text: "ink",
     arrowBg: "bg-ink",
     arrowText: "text-paper",
+    liveUrl: "https://theartistplatform.com.au",
   },
   {
     slug: "alignify",
@@ -44,6 +48,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     text: "ink",
     arrowBg: "bg-ink",
     arrowText: "text-paper",
+    liveUrl: "https://www.alignify.com.au",
   },
   {
     slug: "dataline-people",
@@ -55,5 +60,6 @@ export const WORK_PROJECTS: WorkProject[] = [
     text: "paper",
     arrowBg: "bg-ink",
     arrowText: "text-paper",
+    liveUrl: "https://darkorchid-gaur-511417.hostingersite.com",
   },
 ]

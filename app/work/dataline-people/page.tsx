@@ -1,33 +1,46 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Nav } from "@/components/nav"
 import { SectionHead } from "@/components/section-head"
-import Image from "next/image"
 import { Reveal } from "@/components/reveal"
 import { WorkCard } from "@/components/sections/work-card"
 import { WORK_PROJECTS } from "@/data/work-projects"
-import shotHero from "@/public/work/dataline-finance/hero.webp"
-import shotServices from "@/public/work/dataline-finance/services.webp"
-import shotStories from "@/public/work/dataline-finance/stories.webp"
+import shotHero from "@/public/work/dataline-people/hero.webp"
+import shotProcesses from "@/public/work/dataline-people/processes.webp"
+import shotTrust from "@/public/work/dataline-people/trust.webp"
 
-const PROJECT = WORK_PROJECTS.find((p) => p.slug === "dataline-finance")!
+const PROJECT = WORK_PROJECTS.find((p) => p.slug === "dataline-people")!
 
 export const metadata: Metadata = {
-  title: "Dataline Finance Website Revamp — CreateLyft",
+  title: "Dataline People — Offshore Teams & Process Outsourcing | CreateLyft",
   description:
-    "CreateLyft rebuilt the Dataline Finance website from brief to launch — design, copy, SEO, and development. Thirty-five years of expertise, finally reflected online.",
+    "CreateLyft built the Dataline People site — offshore recruitment, managed process outsourcing, and finance transformation presented as one operating model.",
 }
-
-// ── Page ──────────────────────────────────────────────────────────────────────
 
 const DISCIPLINES = [
   "UX & Visual Design",
-  "Copywriting",
   "Content Strategy",
+  "Copywriting",
   "On-Page SEO",
   "Web Development",
 ]
 
-export default function DatalineFinancePage() {
+const MODULES = [
+  {
+    label: "Offshore Recruitment & Team Building",
+    desc: "Pre-vetted professionals across finance, admin, IT, development, and support — sourced and built into teams rather than dropped in as headcount.",
+  },
+  {
+    label: "Process Outsourcing",
+    desc: "Fully managed processes with automation-driven delivery, priced per process or per transaction instead of per seat.",
+  },
+  {
+    label: "Finance Transformation",
+    desc: "AI digitisation and intelligent automation across reconciliations and reporting, with a stated 99.9% accuracy standard.",
+  },
+]
+
+export default function DatalinePeoplePage() {
   return (
     <>
       <Nav />
@@ -36,19 +49,19 @@ export default function DatalineFinancePage() {
         {/* ── Hero ──────────────────────────────────────────────────────────── */}
         <section className="pt-[140px] pb-[60px]">
           <div className="shell">
-            <SectionHead label="Dataline Finance" right="2025" />
+            <SectionHead label="Dataline People" right="2026" />
 
             <Reveal
               as="h1"
               className="font-display font-bold tracking-[-0.04em] text-ink-2"
               style={{ fontSize: "clamp(48px, 7vw, 100px)", lineHeight: 1.0 }}
             >
-              A website the business actually deserved.
+              Scale without losing control.
             </Reveal>
 
             <Reveal as="div" className="mt-5">
               <span className="inline-flex items-center rounded-full bg-paper-2 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-                Website Revamp &middot; 2025
+                HR Platform &middot; 2026
               </span>
             </Reveal>
           </div>
@@ -61,43 +74,54 @@ export default function DatalineFinancePage() {
 
               {/* Left column — copy */}
               <div>
-                {/* Intro */}
                 <Reveal as="p" className="text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  Dataline Finance has been automating accounts payable and finance operations for
-                  over 35 years. They serve more than 100 global clients, and they&apos;ve built a
-                  reputation for precision and reliability in a space where both actually matter.
-                  The website didn&apos;t come close to reflecting any of that.
+                  Dataline People helps organisations design, source, and optimise offshore teams —
+                  combining expert recruitment, managed process outsourcing, and automation so a
+                  business can grow its output without growing its cost base at the same rate.
                 </Reveal>
 
-                {/* The Challenge */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  When businesses are evaluating a finance automation partner, they&apos;re making a
-                  decision that touches their entire AP operation — invoices, approvals, procurement,
-                  reconciliations. The bar for trust is high. A dated, thin website doesn&apos;t just
-                  underperform in search — it quietly undermines confidence before a conversation has
-                  even started. For a company with Dataline&apos;s depth of experience and client base,
-                  that gap between the business and the website it was presenting was costing them.
+                  Offshore staffing has a credibility problem, and it isn&apos;t undeserved. The
+                  buyer&apos;s real fear isn&apos;t cost — it&apos;s losing control of quality once
+                  the work leaves the building. Compounding that, Dataline offers three things that
+                  are usually sold by three different kinds of vendor: people, managed processes,
+                  and finance automation. Presented badly, that reads as a company without a
+                  centre.
                 </Reveal>
 
-                {/* The Approach */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  CreateLyft handled the full build — design, copy, SEO, and front-end development.
-                  We started with what Dataline actually does well: intelligent automation, 35 years
-                  of operational expertise, high accuracy standards, and a genuine breadth of
-                  solutions across AP, procurement, and finance transformation. The design was
-                  built to carry that weight — structured, considered, and credible. Copy was
-                  written to be clear about the offer without drowning it in jargon. SEO was built
-                  in from day one. Then the dev work: a clean, fast, responsive build delivered end
-                  to end.
+                  CreateLyft structured the site around the through-line instead of the service
+                  list. Recruitment, outsourcing, and finance transformation are presented as three
+                  depths of the same operating model — take our people, or take the process, or
+                  take the process already automated. The content leads with control and
+                  governance rather than headcount savings, and leans on the proof that already
+                  existed: thirty-five years of operations, a +98% customer satisfaction rate, and
+                  named clients including SG Fleet and McGuires Hotels.
                 </Reveal>
 
-                {/* The Outcome */}
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  Dataline Finance now has a website that holds up alongside the scale and quality
-                  of the business behind it. It communicates clearly to the right buyers, performs
-                  in search, and gives their team something they can send to a prospective client
-                  before a meeting with confidence. Thirty-five years of expertise — finally showing
-                  up online the way it should.
+                  The result is a site that sells the harder, more valuable idea — not cheaper
+                  labour, but a way to scale efficiently without compromising quality, control, or
+                  performance.
+                </Reveal>
+
+                {/* Modules */}
+                <Reveal as="div" className="mt-10 border-t border-line pt-8">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted mb-5">
+                    What they offer
+                  </p>
+                  <div className="flex flex-col gap-5">
+                    {MODULES.map((m) => (
+                      <div key={m.label}>
+                        <div className="font-display text-[15px] font-semibold tracking-[-0.02em] text-ink">
+                          {m.label}
+                        </div>
+                        <p className="mt-1 text-[15px] leading-[1.55] text-ink/70 max-w-[48ch]">
+                          {m.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </Reveal>
 
                 {/* What we did */}
@@ -136,7 +160,7 @@ export default function DatalineFinancePage() {
                 <Reveal as="div">
                   <Image
                     src={shotHero}
-                    alt="The Dataline Finance homepage: “Trusted in finance automation for over 30 years,” with volume and accuracy figures."
+                    alt="The Dataline People homepage: “Scale your business with Dataline,” with headline offshore-team figures."
                     sizes="(min-width: 1024px) 55vw, 100vw"
                     className="w-full rounded-[var(--radius-lg)] border border-line"
                   />
@@ -145,16 +169,16 @@ export default function DatalineFinancePage() {
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <Reveal as="div">
                     <Image
-                      src={shotServices}
-                      alt="Three decades of experience — AP automation, procurement, and finance transformation, with client logos."
+                      src={shotProcesses}
+                      alt="Outsourced processes delivered for you — end-to-end team setup and role-specific talent."
                       sizes="(min-width: 1024px) 27vw, 50vw"
                       className="w-full rounded-[var(--radius-lg)] border border-line"
                     />
                   </Reveal>
                   <Reveal as="div">
                     <Image
-                      src={shotStories}
-                      alt="Customer success stories from Computershare and sgfleet."
+                      src={shotTrust}
+                      alt="Three decades of trust — 35 years of experience and a 98% customer satisfaction rate."
                       sizes="(min-width: 1024px) 27vw, 50vw"
                       className="w-full rounded-[var(--radius-lg)] border border-line"
                     />
@@ -174,7 +198,7 @@ export default function DatalineFinancePage() {
               <a href="/work" className="transition-colors duration-150 hover:text-ink">View all →</a>
             </div>
             <div className="grid gap-7 md:grid-cols-3">
-              {WORK_PROJECTS.filter((p) => p.slug !== "dataline-finance").map((p) => (
+              {WORK_PROJECTS.filter((p) => p.slug !== "dataline-people").map((p) => (
                 <WorkCard key={p.slug} project={p} />
               ))}
             </div>
