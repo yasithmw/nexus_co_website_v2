@@ -1,6 +1,7 @@
 import Image from "next/image"
 import type { WorkProject } from "@/data/work-projects"
 import alignifyMark from "@/public/work/alignify-mark.png"
+import ceylonHavenLogo from "@/public/work/ceylon-haven-logo.png"
 import datalineLogo from "@/public/work/dataline-logo.png"
 import tapLogo from "@/public/work/tap-logo.svg"
 
@@ -19,9 +20,9 @@ const tileName =
 const tileArrowBase =
   "inline-flex h-11 w-11 items-center justify-center rounded-full text-base transition-transform duration-[350ms] group-hover:-rotate-45"
 
-// ── Card art: Dataline logo tile ──────────────────────────────────────────────
-// Both Dataline cards sit on dark tiles, so the logo rides on a white card.
-// The tile is pure white to match the logo's own background seamlessly.
+// ── Card art: Dataline Finance ────────────────────────────────────────────────
+// The dark bg-ink tile reads badly against the blue wordmark, so the logo rides
+// on a white card. Pure white, to match the logo's own background seamlessly.
 function DatalineLogoTile() {
   return (
     <div
@@ -58,6 +59,20 @@ function AlignifyArt() {
   )
 }
 
+// ── Card art: Ceylon Haven ────────────────────────────────────────────────────
+// Sand bg-peach tile: the wordmark sits straight on it — the dark teal and gold
+// read cleanly against the warm tone. Wider mark, so it runs a little larger.
+function CeylonHavenArt() {
+  return (
+    <Image
+      src={ceylonHavenLogo}
+      alt=""
+      sizes="(min-width: 768px) 260px, 55vw"
+      className="h-auto w-[clamp(150px,58%,250px)] transition-transform duration-[550ms] ease-[cubic-bezier(0.2,0.6,0.2,1)] group-hover:-translate-y-1 group-hover:scale-[1.04]"
+    />
+  )
+}
+
 // ── WorkCard ──────────────────────────────────────────────────────────────────
 
 type WorkCardProps = {
@@ -85,7 +100,7 @@ export function WorkCard({ project }: WorkCardProps) {
         {project.slug === "dataline-finance" && <DatalineLogoTile />}
         {project.slug === "the-artist-platform" && <ArtistPlatformArt />}
         {project.slug === "alignify" && <AlignifyArt />}
-        {project.slug === "dataline-people" && <DatalineLogoTile />}
+        {project.slug === "ceylon-haven" && <CeylonHavenArt />}
       </div>
 
       {/* Footer */}

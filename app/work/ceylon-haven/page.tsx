@@ -5,42 +5,46 @@ import { SectionHead } from "@/components/section-head"
 import { Reveal } from "@/components/reveal"
 import { WorkCard } from "@/components/sections/work-card"
 import { WORK_PROJECTS } from "@/data/work-projects"
-import shotHero from "@/public/work/dataline-people/hero.webp"
-import shotProcesses from "@/public/work/dataline-people/processes.webp"
-import shotTrust from "@/public/work/dataline-people/trust.webp"
+import shotHero from "@/public/work/ceylon-haven/hero.webp"
+import shotStays from "@/public/work/ceylon-haven/stays.webp"
+import shotRegions from "@/public/work/ceylon-haven/regions.webp"
 
-const PROJECT = WORK_PROJECTS.find((p) => p.slug === "dataline-people")!
+const PROJECT = WORK_PROJECTS.find((p) => p.slug === "ceylon-haven")!
 
 export const metadata: Metadata = {
-  title: "Dataline People — Offshore Teams & Process Outsourcing | CreateLyft",
+  title: "Ceylon Haven — Luxury Villas in Sri Lanka | CreateLyft",
   description:
-    "CreateLyft built the Dataline People site — offshore recruitment, managed process outsourcing, and finance transformation presented as one operating model.",
+    "CreateLyft built Ceylon Haven, a curated collection of handpicked luxury villas across Sri Lanka — booked through people who actually live there.",
 }
 
 const DISCIPLINES = [
+  "Brand & Identity",
   "UX & Visual Design",
-  "Content Strategy",
   "Copywriting",
-  "On-Page SEO",
   "Web Development",
+  "On-Page SEO",
 ]
 
-const MODULES = [
+const REGIONS = [
   {
-    label: "Offshore Recruitment & Team Building",
-    desc: "Pre-vetted professionals across finance, admin, IT, development, and support — sourced and built into teams rather than dropped in as headcount.",
+    label: "Tropics",
+    desc: "Coastal villas along the shorelines where the Indian Ocean stretches out past the garden wall.",
   },
   {
-    label: "Process Outsourcing",
-    desc: "Fully managed processes with automation-driven delivery, priced per process or per transaction instead of per seat.",
+    label: "Hills",
+    desc: "Cool-climate retreats set among rolling tea country, misty mornings, and long hillside views.",
   },
   {
-    label: "Finance Transformation",
-    desc: "AI digitisation and intelligent automation across reconciliations and reporting, with a stated 99.9% accuracy standard.",
+    label: "Safaris",
+    desc: "Properties on the edge of the national parks, close enough for a dawn start.",
+  },
+  {
+    label: "Culture",
+    desc: "Villas within reach of the ancient temples and sacred sites of the cultural triangle.",
   },
 ]
 
-export default function DatalinePeoplePage() {
+export default function CeylonHavenPage() {
   return (
     <>
       <Nav />
@@ -49,19 +53,19 @@ export default function DatalinePeoplePage() {
         {/* ── Hero ──────────────────────────────────────────────────────────── */}
         <section className="pt-[140px] pb-[60px]">
           <div className="shell">
-            <SectionHead label="Dataline People" right="2026" />
+            <SectionHead label="Ceylon Haven" right="2026" />
 
             <Reveal
               as="h1"
               className="font-display font-bold tracking-[-0.04em] text-ink-2"
               style={{ fontSize: "clamp(48px, 7vw, 100px)", lineHeight: 1.0 }}
             >
-              Scale without losing control.
+              Where luxury meets local charm.
             </Reveal>
 
             <Reveal as="div" className="mt-5">
               <span className="inline-flex items-center rounded-full bg-paper-2 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-                HR Platform &middot; 2026
+                Website Build &middot; 2026
               </span>
             </Reveal>
           </div>
@@ -75,49 +79,48 @@ export default function DatalinePeoplePage() {
               {/* Left column — copy */}
               <div>
                 <Reveal as="p" className="text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  Dataline People helps organisations design, source, and optimise offshore teams —
-                  combining expert recruitment, managed process outsourcing, and automation so a
-                  business can grow its output without growing its cost base at the same rate.
+                  Ceylon Haven is a curated collection of luxury villas across Sri Lanka —
+                  handpicked properties in stunning locations, put together by people who call the
+                  island home. Private pools and beachfront estates, with airport transfers,
+                  in-villa service, and a private chef arranged before you arrive.
                 </Reveal>
 
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  Offshore staffing has a credibility problem, and it isn&apos;t undeserved. The
-                  buyer&apos;s real fear isn&apos;t cost — it&apos;s losing control of quality once
-                  the work leaves the building. Compounding that, Dataline offers three things that
-                  are usually sold by three different kinds of vendor: people, managed processes,
-                  and finance automation. Presented badly, that reads as a company without a
-                  centre.
+                  The hard part of this category is trust. A traveller booking a villa sight-unseen,
+                  in a country they may not know, is making an expensive decision on the strength of
+                  photographs — and every listing site on the internet has taught them that
+                  photographs lie. The competition is not other villa brands so much as the large
+                  marketplaces, which win on inventory and lose on judgement.
                 </Reveal>
 
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  CreateLyft structured the site around the through-line instead of the service
-                  list. Recruitment, outsourcing, and finance transformation are presented as three
-                  depths of the same operating model — take our people, or take the process, or
-                  take the process already automated. The content leads with control and
-                  governance rather than headcount savings, and leans on the proof that already
-                  existed: thirty-five years of operations, a +98% customer satisfaction rate, and
-                  named clients including SG Fleet and McGuires Hotels.
+                  CreateLyft built the site around that gap. Ceylon Haven is not a marketplace, so
+                  it doesn&apos;t behave like one: properties are presented as a considered
+                  selection, each assessed on design integrity, location, and service quality, and
+                  the local knowledge is treated as the product rather than a footnote. Rather than
+                  sort by price, the site sorts by the kind of trip — tropics, hills, safaris,
+                  culture — so a guest chooses the landscape first and the villa second.
                 </Reveal>
 
                 <Reveal as="p" className="mt-5 text-[17px] leading-[1.65] text-ink/70 max-w-[52ch]">
-                  The result is a site that sells the harder, more valuable idea — not cheaper
-                  labour, but a way to scale efficiently without compromising quality, control, or
-                  performance.
+                  The result is a booking experience that sells the stay rather than the room:
+                  remarkable properties, chosen with purpose, backed by exclusive inclusions and
+                  24/7 support from a team on the ground.
                 </Reveal>
 
-                {/* Modules */}
+                {/* Regions */}
                 <Reveal as="div" className="mt-10 border-t border-line pt-8">
                   <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted mb-5">
-                    What they offer
+                    Where you&apos;ll wake up
                   </p>
                   <div className="flex flex-col gap-5">
-                    {MODULES.map((m) => (
-                      <div key={m.label}>
+                    {REGIONS.map((r) => (
+                      <div key={r.label}>
                         <div className="font-display text-[15px] font-semibold tracking-[-0.02em] text-ink">
-                          {m.label}
+                          {r.label}
                         </div>
                         <p className="mt-1 text-[15px] leading-[1.55] text-ink/70 max-w-[48ch]">
-                          {m.desc}
+                          {r.desc}
                         </p>
                       </div>
                     ))}
@@ -160,7 +163,7 @@ export default function DatalinePeoplePage() {
                 <Reveal as="div">
                   <Image
                     src={shotHero}
-                    alt="The Dataline People homepage: “Scale your business with Dataline,” with headline offshore-team figures."
+                    alt="The Ceylon Haven homepage: “Where luxury meets local charm,” over a beachfront villa pool, with a villa search."
                     sizes="(min-width: 1024px) 55vw, 100vw"
                     className="w-full rounded-[var(--radius-lg)] border border-line"
                   />
@@ -169,16 +172,16 @@ export default function DatalinePeoplePage() {
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <Reveal as="div">
                     <Image
-                      src={shotProcesses}
-                      alt="Outsourced processes delivered for you — end-to-end team setup and role-specific talent."
+                      src={shotStays}
+                      alt="Remarkable stays, chosen with purpose — villa cards for Bolgoda, Bentota, and Mirissa."
                       sizes="(min-width: 1024px) 27vw, 50vw"
                       className="w-full rounded-[var(--radius-lg)] border border-line"
                     />
                   </Reveal>
                   <Reveal as="div">
                     <Image
-                      src={shotTrust}
-                      alt="Three decades of trust — 35 years of experience and a 98% customer satisfaction rate."
+                      src={shotRegions}
+                      alt="Where will you wake up next — browsing villas by tropics, hills, safaris, and culture."
                       sizes="(min-width: 1024px) 27vw, 50vw"
                       className="w-full rounded-[var(--radius-lg)] border border-line"
                     />
@@ -198,7 +201,7 @@ export default function DatalinePeoplePage() {
               <a href="/work" className="transition-colors duration-150 hover:text-ink">View all →</a>
             </div>
             <div className="grid gap-7 md:grid-cols-3">
-              {WORK_PROJECTS.filter((p) => p.slug !== "dataline-people").map((p) => (
+              {WORK_PROJECTS.filter((p) => p.slug !== "ceylon-haven").map((p) => (
                 <WorkCard key={p.slug} project={p} />
               ))}
             </div>
